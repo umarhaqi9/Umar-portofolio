@@ -47,7 +47,7 @@ function App() {
               </Button>
             </Col>
             <Col>
-              <Button className='proj-button' variant='secondary' size='lg' href='http://bmi-and-bmr-calc.vercel.app/'>
+              <Button className='proj-button' variant='secondary' size='lg' href='http://bmi-and-bmr-calc.vercel.app/' target="_blank">
                 <div className='button-text'>
                   <h2>BMCalc</h2>
                   <p>BMI and BMR Calculator</p>
@@ -55,7 +55,7 @@ function App() {
               </Button>
             </Col>
             <Col>
-              <Button className='proj-button' variant='secondary' size='lg' href='https://sleepdisorderexsys.000webhostapp.com/'>
+              <Button className='proj-button' variant='secondary' size='lg' href='https://sleepdisorderexsys.000webhostapp.com/' target="_blank">
                 <div className='button-text'>
                   <h2>SleepDisorder</h2>
                   <p>Expert System</p>
