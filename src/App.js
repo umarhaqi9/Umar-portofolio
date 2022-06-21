@@ -6,7 +6,7 @@ import { Button ,NavDropdown, Nav, Container, Navbar, Row, Col} from 'react-boot
 function App() {
   return (
     <div className='App'>
-      <Navbar className='fixed-top' bg="dark" variant='dark' expand="lg">
+      <Navbar className='fixed-top' bg="black" variant='dark' expand="lg">
         <Container>
           <Navbar.Brand href="#home">Umar Haqi</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -27,7 +27,7 @@ function App() {
         </Container>
       </Navbar>
 
-      <div id='welcome' className='bg-dark text-white jumbotron jumbotron-fluid text-center p-5'>
+      <div id='welcome' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
         <img className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
         <h1>Hi, I'm Umar!</h1>
         <p>I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React.</p>
@@ -68,7 +68,7 @@ function App() {
         
       </div>
 
-      <div id='footer' class="text-center p-4 bg-dark text-white">
+      <div id='footer' class="text-center p-4 bg-black text-white">
         Copyright &copy; Umar Haqi 2022
       </div>
       
