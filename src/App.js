@@ -69,7 +69,7 @@ function App() {
       </div>
 
       <div id='footer' class="text-center p-4 bg-dark text-white">
-        Copyright &copy; SleepDisorder 2021
+        Copyright &copy; Umar Haqi 2022
       </div>
       
       
