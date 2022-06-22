@@ -8,13 +8,13 @@ function App() {
     <div className='App'>
       <Navbar className='fixed-top' bg="black" variant='dark' expand="lg">
         <Container>
-          <Navbar.Brand href="#home">Umar Haqi</Navbar.Brand>
+          <Navbar.Brand href="#welcome">Umar Haqi</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse  id="basic-navbar-nav">
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link href="#welcome">About Me</Nav.Link>
+              <Nav.Link href="#moreaboutme">About Me</Nav.Link>
               <Nav.Link href="#projects">My Projects</Nav.Link>
-              <Nav.Link href="#link">CV</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
               {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -94,7 +94,7 @@ function App() {
         <Container>
           <Row>
             <Col>
-              <img className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
+              <img className='pic' src='https://cdn.discordapp.com/attachments/989301099422949466/989309224943235072/pp-removebg-preview.png'/>
             </Col>
             <Col>
               <p className='m-5'>
@@ -106,25 +106,22 @@ function App() {
             </Col>
           </Row>
         </Container>
-        
-        
-        
-
       </div>
 
-      <div id='projects' className='bg-white text-dark jumbotron jumbotron-fluid text-center p-5'>
-        <p>Here are a few of my social media :</p>
+      <div id='contact' className='bg-white text-dark jumbotron jumbotron-fluid text-center p-5'>
+        <h1>Contacts</h1>
+        <p className='m-4'>Here are a few of my social media profiles :</p>
         <Container>
           <Row>
             <Col>
-              <Button className='bg-black text-white' href='https://github.com/umarhaqi9' target='_blank'>
-                <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/2111/2111432.png'/>
+              <Button variant='black' className='bg-black text-white' href='https://github.com/umarhaqi9' target='_blank'>
+                <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172546437160/github.png'/>
                 Github
               </Button>
             </Col>
             <Col>
               <Button className='bg-primary text-white' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
-                <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/2111/2111432.png'/>
+                <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172236083320/instagram.png'/>
                 Instagram
               </Button>
             </Col>
