@@ -90,27 +90,40 @@ function App() {
       </div>
       
       <div id='moreaboutme' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
-        <img className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
         <h1>More About Me</h1>
-        <p className='m-5'>
-          I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React. I'm a very open guy to making new friends.
-          
-        </p>
+        <Container>
+          <Row>
+            <Col>
+              <img className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
+            </Col>
+            <Col>
+              <p className='m-5'>
+                I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React. 
+                I have been constantly trying my best to develop my front-end engineering skills for the past 2 years. I'm a very open guy to making new friends.
+                I am a very "try hard" person to achive the best outcome with the best of my abilites. It's not always perfect, but I will always make sure to give
+                the best I can to finish a project.
+              </p>
+            </Col>
+          </Row>
+        </Container>
+        
+        
+        
+
+      </div>
+
+      <div id='projects' className='bg-white text-dark jumbotron jumbotron-fluid text-center p-5'>
         <p>Here are a few of my social media :</p>
         <Container>
           <Row>
             <Col>
-              <Button className='bg-black text-white' href='https://github.com/umarhaqi9'>Github</Button>
+              <Button className='bg-black text-white' href='https://github.com/umarhaqi9' target='_blank'>Github</Button>
             </Col>
             <Col>
-              <Button className='bg-primary text-white' href='https://www.instagram.com/umar.haqi912/'>Instagram</Button>
+              <Button className='bg-primary text-white' href='https://www.instagram.com/umar.haqi912/' target='_blank'>Instagram</Button>
             </Col>
           </Row>
-          
-          
         </Container>
-        
-
       </div>
 
       <div id='footer' class="text-center p-4 bg-black text-white">
