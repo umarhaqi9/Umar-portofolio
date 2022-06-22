@@ -117,10 +117,16 @@ function App() {
         <Container>
           <Row>
             <Col>
-              <Button className='bg-black text-white' href='https://github.com/umarhaqi9' target='_blank'>Github</Button>
+              <Button className='bg-black text-white' href='https://github.com/umarhaqi9' target='_blank'>
+                <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/2111/2111432.png'/>
+                Github
+              </Button>
             </Col>
             <Col>
-              <Button className='bg-primary text-white' href='https://www.instagram.com/umar.haqi912/' target='_blank'>Instagram</Button>
+              <Button className='bg-primary text-white' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
+                <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/2111/2111432.png'/>
+                Instagram
+              </Button>
             </Col>
           </Row>
         </Container>
