@@ -64,8 +64,53 @@ function App() {
             </Col>
           </Row>
           
+          <Row>
+            <Col>
+              <Button className='proj-button' variant='secondary' size='lg' href='https://stayinresort.000webhostapp.com/' target="_blank">
+                <div className='button-text'>
+                  <h2>StayIn Resort</h2>
+                  <p>Resort Booking website</p>
+                </div>
+                
+              </Button>
+            </Col>
+            <Col>
+              <Button className='proj-button' variant='secondary' size='lg' href='https://gameboii.000webhostapp.com/' target="_blank">
+                <div className='button-text'>
+                  <h2>Gameboii</h2>
+                  <p>Game Rent Website</p>
+                </div>
+              </Button>
+            </Col>
+            
+          </Row>
+
         </Container>
         
+      </div>
+      
+      <div id='moreaboutme' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
+        <img className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
+        <h1>More About Me</h1>
+        <p className='m-5'>
+          I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React. I'm a very open guy to making new friends.
+          
+        </p>
+        <p>Here are a few of my social media :</p>
+        <Container>
+          <Row>
+            <Col>
+              <Button className='bg-black text-white' href='https://github.com/umarhaqi9'>Github</Button>
+            </Col>
+            <Col>
+              <Button className='bg-primary text-white' href='https://www.instagram.com/umar.haqi912/'>Instagram</Button>
+            </Col>
+          </Row>
+          
+          
+        </Container>
+        
+
       </div>
 
       <div id='footer' class="text-center p-4 bg-black text-white">
