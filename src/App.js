@@ -82,7 +82,14 @@ function App() {
                 </div>
               </Button>
             </Col>
-            
+            <Col>
+              <Button className='proj-button' variant='secondary' size='lg' href='https://pti-uas-food-api.vercel.app/' target="_blank">
+                <div className='button-text'>
+                  <h2>Foodies For Groupies</h2>
+                  <p>Food Recipe Website</p>
+                </div>
+              </Button>
+            </Col>
           </Row>
 
         </Container>
