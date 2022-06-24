@@ -62,6 +62,14 @@ function App() {
                 </div>
               </Button>
             </Col>
+            <Col>
+              <Button className='proj-button' variant='secondary' size='lg' href='https://umn.itch.io/witchahead' target="_blank">
+                <div className='button-text'>
+                  <h2>WitchAhead</h2>
+                  <p>Game</p>
+                </div>
+              </Button>
+            </Col>
           </Row>
           
           <Row>
