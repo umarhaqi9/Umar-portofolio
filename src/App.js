@@ -121,13 +121,13 @@ function App() {
         <Container>
           <Row>
             <Col>
-              <Button variant='black' className='bg-black text-white' href='https://github.com/umarhaqi9' target='_blank'>
+              <Button variant='black' className='bg-black text-white rounded-pill' href='https://github.com/umarhaqi9' target='_blank'>
                 <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172546437160/github.png'/>
                 Github
               </Button>
             </Col>
             <Col>
-              <Button className='bg-primary text-white' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
+              <Button className='bg-primary text-white rounded-pill' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
                 <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172236083320/instagram.png'/>
                 Instagram
               </Button>
