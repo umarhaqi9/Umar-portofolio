@@ -106,7 +106,7 @@ function App() {
         <Container>
           <Row>
             <Col>
-              <img className='pic' src='https://cdn.discordapp.com/attachments/989301099422949466/989309224943235072/pp-removebg-preview.png'/>
+              <img className='pic mt-3' src='https://cdn.discordapp.com/attachments/989301099422949466/989309224943235072/pp-removebg-preview.png'/>
             </Col>
             <Col>
               <p className='m-5'>
@@ -132,7 +132,13 @@ function App() {
               </Button>
             </Col>
             <Col>
-              <Button className='bg-primary text-white rounded-pill' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
+              <Button variant='primary' className='text-white rounded-pill' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
+                <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/990854583083495424/linkedin.png'/>
+                LinkedIn
+              </Button>
+            </Col>
+            <Col>
+              <Button variant='secondary' className='bg-secondary text-white rounded-pill' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
                 <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172236083320/instagram.png'/>
                 Instagram
               </Button>
