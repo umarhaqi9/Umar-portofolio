@@ -50,7 +50,10 @@ function App() {
         <div id='welcome' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
           <img className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
           <h1>Hi, I'm Umar!</h1>
-          <p>I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React.</p>
+          <p>
+            Welcome to my personal website. This site will provide informations
+            about myself. 
+          </p>
         </div>
         
         {/* Projects Section */}
@@ -60,67 +63,66 @@ function App() {
             <Container>
               <Row>
                 <Col>
-                  <Button className='proj-button' variant='secondary' size='lg' href='https://waddup-eta.vercel.app/' target="_blank">
-                    <div className='button-text'>
+                  <a href='https://waddup-eta.vercel.app/' target='_blank'>
+                    <button id='Waddup' className='proj-button'>
                       <h2>Waddup</h2>
                       <p>Messenger App</p>
-                    </div>
-                  </Button>
+                    </button>
+                  </a>
                 </Col>
                 <Col>
-                  <Button className='proj-button' variant='secondary' size='lg' href='http://bmi-and-bmr-calc.vercel.app/' target="_blank">
-                    <div className='button-text'>
+                  <a href='http://bmi-and-bmr-calc.vercel.app/' target='_blank'>
+                    <button id='BMCalc' className='proj-button'>
                       <h2>BMCalc</h2>
                       <p>BMI and BMR Calculator</p>
-                    </div>
-                  </Button>
+                    </button>
+                  </a>
                 </Col>
                 <Col>
-                  <Button className='proj-button' variant='secondary' size='lg' href='https://sleepdisorderexsys.000webhostapp.com/' target="_blank">
-                    <div className='button-text'>
+                  
+                  <a href='https://sleepdisorderexsys.000webhostapp.com/' target='_blank'>
+                    <button id='SleepDisorder' className='proj-button'>
                       <h2>SleepDisorder</h2>
                       <p>Expert System</p>
-                    </div>
-                  </Button>
+                    </button>
+                  </a>
                 </Col>
                 <Col>
-                  <Button className='proj-button' variant='secondary' size='lg' href='https://stayinresort.000webhostapp.com/' target="_blank">
-                    <div className='button-text'>
+                  
+                  <a href='https://stayinresort.000webhostapp.com/' target='_blank'>
+                    <button id='StayIn' className='proj-button'>
                       <h2>StayIn Resort</h2>
                       <p>Resort Booking website</p>
-                    </div>
-                    
-                  </Button>
+                    </button>
+                  </a>
                 </Col>
                 <Col>
-                  <Button className='proj-button' variant='secondary' size='lg' href='https://gameboii.000webhostapp.com/' target="_blank">
-                    <div className='button-text'>
+                  <a href='https://gameboii.000webhostapp.com/' target='_blank'>
+                    <button id='Gameboii' className='proj-button'>
                       <h2>Gameboii</h2>
                       <p>Game Rent Website</p>
-                    </div>
-                  </Button>
+                    </button>
+                  </a>
                 </Col>
                 <Col>
-                  <Button className='proj-button' variant='secondary' size='lg' href='https://pti-uas-food-api.vercel.app/' target="_blank">
-                    <div className='button-text'>
+                  <a href='https://pti-uas-food-api.vercel.app/' target='_blank'>
+                    <button id='FFG' className='proj-button'>
                       <h2>Foodies For Groupies</h2>
                       <p>Food Recipe Website</p>
-                    </div>
-                  </Button>
+                    </button>
+                  </a>
                 </Col>
-                
                 <Col>
-                  <Button className='proj-button' variant='secondary' size='lg' href='https://umn.itch.io/witchahead' target="_blank">
-                    <div className='button-text'>
+                  <a href='https://umn.itch.io/witchahead' target='_blank'>
+                    <button id='WitchAhead' className='proj-button'>
                       <h2>WitchAhead</h2>
                       <p>Game</p>
-                    </div>
-                  </Button>
+                    </button>
+                  </a>
                 </Col>
               </Row>
             </Container>
           </div>
-          
         </div>
         
         {/* About Me Section */}

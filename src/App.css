@@ -6,9 +6,7 @@
 }
 
 .welcome{
-  height: 500px;
-  /* background-color: #282c34; */
-  padding-top: 20px;
+  height: 100vh;
 }
 
 
@@ -26,11 +24,38 @@
   width: 300px;
   height: 300px;
   margin: 10px;
+  font-size: large;
+  border-radius: 12px;
+  background-color: rgb(111, 118, 127);
+  color: white;
+  border: 0;
 }
 
 .proj-button:hover{
   transform: scale(1.2);
   transition: transform .4s;
+}
+
+#Waddup.proj-button:hover{
+  background-color: #4E6190;
+}
+#BMCalc.proj-button:hover{
+  background-color: #7579E7;
+}
+#SleepDisorder.proj-button:hover{
+  background-color: #0275d8;
+}
+#StayIn.proj-button:hover{
+  background-color: #5cb85c;
+}
+#Gameboii.proj-button:hover{
+  background-color: #292b2c;
+}
+#FFG.proj-button:hover{
+  background-color: #3f51b5;
+}
+#WitchAhead.proj-button:hover{
+  background-color: #22307d;
 }
 
 .button-text{
