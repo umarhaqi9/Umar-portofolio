@@ -189,7 +189,7 @@ function App() {
                 +6287878712774
               </p>
               <p className='text-center'>
-                <img className='icon-button' src='https://cdn-icons.flaticon.com/png/512/542/premium/542689.png?token=exp=1658563291~hmac=aecb844700615f87ed267e8fa46333ab'/>
+                <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/646/646135.png'/>
                 umarhaqi9@gmail.com
               </p>
               
