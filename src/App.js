@@ -150,31 +150,31 @@ function App() {
               </Row>
               <Row className='text-center'>
                 <Col >
-                  <img className='pic mt-3' src='https://cdn-icons-png.flaticon.com/512/1051/1051277.png'/>
+                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/1051/1051277.png'/>
                   <p>HTML</p>
                 </Col>
                 <Col>
-                  <img className='pic mt-3' src='https://cdn-icons-png.flaticon.com/512/732/732190.png'/>
+                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/732/732190.png'/>
                   <p>CSS</p>
                 </Col>
                 <Col>
-                  <img className='pic mt-3' src='https://cdn-icons-png.flaticon.com/512/3334/3334886.png'/>
+                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/3334/3334886.png'/>
                   <p>ReactJS</p>
                 </Col>
                 <Col>
-                  <img className='pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968672.png'/>
+                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968672.png'/>
                   <p>Bootstrap</p>
                 </Col>
                 <Col>
-                  <img className='pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png'/>
+                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png'/>
                   <p>Javascript</p>
                 </Col>
                 <Col>
-                  <img className='pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968332.png'/>
+                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968332.png'/>
                   <p>PHP</p>
                 </Col>
                 <Col>
-                  <img className='pic mt-3' src='https://ionicacademy.com/wp-content/uploads/2017/06/ionic-logo-portrait.png'/>
+                  <img className='skill-pic mt-3' src='https://ionicacademy.com/wp-content/uploads/2017/06/ionic-logo-portrait.png'/>
                   <p>Ionic</p>
                 </Col>
               </Row>
