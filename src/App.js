@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Navbar className='fixed-top' bg="black" variant='dark' expand="lg">
+      <Navbar className='fixed-top p-2' bg="black" variant='dark' expand="lg">
         <Container>
           <Navbar.Brand href="#welcome">Umar Haqi</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -134,7 +134,7 @@ function App() {
         {/* About Me Section */}
         <div id='moreaboutme' className='bg-black text-white jumbotron jumbotron-fluid p-5'>
           <div className='reveal'>
-            <h1 className='text-center text-uppercase m-2'>More About Me</h1>
+            <h1 className='text-center text-uppercase m-2'>About Me</h1>
             <Container>
               <Row className='text-center'>
                 <Col>
@@ -205,19 +205,19 @@ function App() {
               <Container className='text-center'>
                 <Row>
                   <Col>
-                    <Button variant='black' className='bg-black text-white rounded-pill' href='https://github.com/umarhaqi9' target='_blank'>
+                    <Button variant='black' className='bg-black text-white rounded-pill m-1' href='https://github.com/umarhaqi9' target='_blank'>
                       <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172546437160/github.png'/>
                       Github
                     </Button>
                   </Col>
                   <Col>
-                    <Button variant='primary' className='text-white rounded-pill' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
+                    <Button variant='primary' className='text-white rounded-pill m-1' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
                       <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/990854583083495424/linkedin.png'/>
                       LinkedIn
                     </Button>
                   </Col>
                   <Col>
-                    <Button variant='secondary' className='text-white rounded-pill' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
+                    <Button variant='secondary' className='text-white rounded-pill m-1' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
                       <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172236083320/instagram.png'/>
                       Instagram
                     </Button>

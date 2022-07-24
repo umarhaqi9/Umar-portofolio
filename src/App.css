@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Asap:400,400i,500,500i,600,600i,700,700i');
 .App{
   scroll-behavior: smooth;
   font-family: "Asap", sans-serif;
 }
 
-.welcome{
-  height: 100vh;
+.App h1{
+  font-weight: 600;
 }
-
 
 /* personal CSS */
 
@@ -69,15 +68,19 @@
   background-color: rgb(67, 132, 217);
   color: white;
   border: 0;
-  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
 }
 .scrollBtn:hover{
   transform: scale(1.15);
-  transition: 0.2s ease;
+  transition: 0.4s ease;
 }
 
 #welcome{
   margin-bottom: -10px;
+}
+
+#projects{
+  margin-top: -10px;
 }
 
 .button-text{
