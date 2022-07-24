@@ -55,9 +55,15 @@ function App() {
             about myself. 
           </p>
         </div>
-        
+        <div className='text-center'>
+          <a href='#projects'>
+            <button className='scrollBtn text-center'>Scroll Down!</button>
+          </a>
+        </div>
+
         {/* Projects Section */}
         <div id='projects' className='bg-white text-dark jumbotron jumbotron-fluid text-center p-5'>
+          
           <div className='reveal'>
             <h1 className='text-uppercase m-5'>My Projects</h1>
             <Container>
