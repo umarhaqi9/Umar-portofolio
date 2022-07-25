@@ -98,6 +98,20 @@
   margin: 5px;
 }
 
+.personal-button{
+  border-radius: 10px;
+  margin: 5px;
+  border: 0;
+  background-color: rgb(67, 132, 217);
+  color: white;
+  padding: 10px;
+}
+
+.personal-button:hover{
+  transform: scale(1.18);
+  transition: ease 0.3s;
+}
+
 .pic{
   padding: 20px;
   width: 300px;

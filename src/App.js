@@ -141,12 +141,18 @@ function App() {
                   <img className='pic text-center mt-3' src='https://cdn.discordapp.com/attachments/989301099422949466/989309224943235072/pp-removebg-preview.png'/>
                 </Col>
                 <Col className='mt-4 col-md-6'>
-                  <p className='m-4'>
+                  <p className='text-justify m-4'>
                     I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React. 
                     I have been constantly trying my best to develop my front-end engineering skills for the past 2 years. I'm a very open guy to making new friends.
                     I am a very "try hard" person to achive the best outcome with the best of my abilites. It's not always perfect, but I will always make sure to give
                     the best I can to finish a project. 
                   </p>
+                    <a href='https://cdn.discordapp.com/attachments/989301099422949466/1001006420814200862/Umar_Haqi_CV.pdf' target="_blank" download>
+                      <button className='personal-button'>CV</button>
+                    </a>
+                    <a href='https://cdn.discordapp.com/attachments/989301099422949466/1001006421132984320/Umar_Haqi_Portofolio.pdf' target="_blank" download>
+                      <button className='personal-button'>Portofolio (PDF ver.)</button>
+                    </a>
                 </Col>
               </Row>
               <Row className='text-center'>
@@ -188,6 +194,11 @@ function App() {
                 <Col>
                   <img className='skill-pic mt-3' src='https://ionicacademy.com/wp-content/uploads/2017/06/ionic-logo-portrait.png'/>
                   <p>Ionic</p>
+                  <p>⭐⭐⭐</p>
+                </Col>
+                <Col>
+                  <img className='skill-pic mt-3' src='https://cdn.discordapp.com/attachments/989301099422949466/1001013427298373702/codeigniter.png'/>
+                  <p>CodeIgniter</p>
                   <p>⭐⭐⭐</p>
                 </Col>
               </Row>
