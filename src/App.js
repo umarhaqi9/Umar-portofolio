@@ -158,30 +158,37 @@ function App() {
                 <Col >
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/1051/1051277.png'/>
                   <p>HTML</p>
+                  <p>⭐⭐⭐⭐⭐</p>
                 </Col>
                 <Col>
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/732/732190.png'/>
                   <p>CSS</p>
+                  <p>⭐⭐⭐⭐⭐</p>
                 </Col>
                 <Col>
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/3334/3334886.png'/>
                   <p>ReactJS</p>
+                  <p>⭐⭐⭐⭐</p>
                 </Col>
                 <Col>
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968672.png'/>
                   <p>Bootstrap</p>
+                  <p>⭐⭐⭐⭐</p>
                 </Col>
                 <Col>
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png'/>
                   <p>Javascript</p>
+                  <p>⭐⭐⭐</p>
                 </Col>
                 <Col>
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968332.png'/>
                   <p>PHP</p>
+                  <p>⭐⭐⭐</p>
                 </Col>
                 <Col>
                   <img className='skill-pic mt-3' src='https://ionicacademy.com/wp-content/uploads/2017/06/ionic-logo-portrait.png'/>
                   <p>Ionic</p>
+                  <p>⭐⭐⭐</p>
                 </Col>
               </Row>
             </Container>
