@@ -47,7 +47,7 @@ function App() {
       </Navbar>
         
         {/* Welcome Section */}
-        <div id='welcome' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
+        <div id='welcome' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5 '>
           <img className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
           <h1>Hi, I'm Umar!</h1>
           <p>
@@ -55,92 +55,34 @@ function App() {
             about myself. 
           </p>
         </div>
-        <div className='text-center'>
-          <a href='#projects'>
+        <div className='bg-black text-center'>
+          <a href='#moreaboutme'>
             <button className='scrollBtn text-center'>Scroll Down!</button>
           </a>
         </div>
 
-        {/* Projects Section */}
-        <div id='projects' className='bg-white text-dark jumbotron jumbotron-fluid text-center p-5'>
-          
-          <div className='reveal'>
-            <h1 className='text-uppercase m-5'>My Projects</h1>
-            <Container>
-              <Row>
-                <Col>
-                  <a href='https://waddup-eta.vercel.app/' target='_blank'>
-                    <button id='Waddup' className='proj-button'>
-                      <h2>Waddup</h2>
-                      <p>Messenger App</p>
-                    </button>
-                  </a>
-                </Col>
-                <Col>
-                  <a href='http://bmi-and-bmr-calc.vercel.app/' target='_blank'>
-                    <button id='BMCalc' className='proj-button'>
-                      <h2>BMCalc</h2>
-                      <p>BMI and BMR Calculator</p>
-                    </button>
-                  </a>
-                </Col>
-                <Col>
-                  
-                  <a href='https://sleepdisorderexsys.000webhostapp.com/' target='_blank'>
-                    <button id='SleepDisorder' className='proj-button'>
-                      <h2>SleepDisorder</h2>
-                      <p>Expert System</p>
-                    </button>
-                  </a>
-                </Col>
-                <Col>
-                  
-                  <a href='https://stayinresort.000webhostapp.com/' target='_blank'>
-                    <button id='StayIn' className='proj-button'>
-                      <h2>StayIn Resort</h2>
-                      <p>Resort Booking website</p>
-                    </button>
-                  </a>
-                </Col>
-                <Col>
-                  <a href='https://gameboii.000webhostapp.com/' target='_blank'>
-                    <button id='Gameboii' className='proj-button'>
-                      <h2>Gameboii</h2>
-                      <p>Game Rent Website</p>
-                    </button>
-                  </a>
-                </Col>
-                <Col>
-                  <a href='https://pti-uas-food-api.vercel.app/' target='_blank'>
-                    <button id='FFG' className='proj-button'>
-                      <h2>Foodies For Groupies</h2>
-                      <p>Food Recipe Website</p>
-                    </button>
-                  </a>
-                </Col>
-                <Col>
-                  <a href='https://umn.itch.io/witchahead' target='_blank'>
-                    <button id='WitchAhead' className='proj-button'>
-                      <h2>WitchAhead</h2>
-                      <p>Game</p>
-                    </button>
-                  </a>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-        </div>
-        
         {/* About Me Section */}
-        <div id='moreaboutme' className='bg-black text-white jumbotron jumbotron-fluid p-5'>
+        <div id='moreaboutme' className='bg-white text-black jumbotron jumbotron-fluid p-5 mt-5'>
           <div className='reveal'>
-            <h1 className='text-center text-uppercase m-2'>About Me</h1>
             <Container>
               <Row className='text-center'>
                 <Col>
-                  <img className='pic text-center mt-3' src='https://cdn.discordapp.com/attachments/989301099422949466/989309224943235072/pp-removebg-preview.png'/>
+                  <div class="a-box">
+                    <div class="img-container">
+                      <div class="img-inner">
+                        <img className='text-center mr-2' src="https://cdn.discordapp.com/attachments/989301099422949466/989309224943235072/pp-removebg-preview.png"/>
+                      </div>
+                    </div>
+                    <div class="text-container">
+                      <h3>Umar Haqi</h3>
+                      <div>
+                        <p>Front-End Developer</p>
+                      </div>
+                    </div>
+                  </div>
                 </Col>
                 <Col className='mt-4 col-md-6'>
+                  <h1 className='text-center text-uppercase m-2'>About Me</h1>
                   <p className='text-justify m-4'>
                     I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React. 
                     I have been constantly trying my best to develop my front-end engineering skills for the past 2 years. I'm a very open guy to making new friends.
@@ -155,9 +97,17 @@ function App() {
                     </a>
                 </Col>
               </Row>
+            </Container>
+          </div>
+        </div>
+
+        {/* Skills Section */}
+        <div className='skills text-black jumbotron jumbotron-fluid p-5'>
+          <div className='reveal'>
+            <Container>
               <Row className='text-center'>
                 <Col>
-                  <h2 className='m-5'>My Skills</h2>
+                  <h1 className='m-3'>My Skills</h1>
                 </Col>
               </Row>
               <Row className='text-center'>
@@ -205,7 +155,76 @@ function App() {
             </Container>
           </div>
         </div>
-          
+
+          {/* Projects Section */}
+          <div id='projects' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
+            <div className='reveal'>
+              <h1 className='text-uppercase m-5'>My Projects</h1>
+              <Container>
+                <Row>
+                  <Col>
+                    <a href='https://waddup-eta.vercel.app/' target='_blank'>
+                      <button id='Waddup' className='proj-button'>
+                        <h2>Waddup</h2>
+                        <p>Messenger App</p>
+                      </button>
+                    </a>
+                  </Col>
+                  <Col>
+                    <a href='http://bmi-and-bmr-calc.vercel.app/' target='_blank'>
+                      <button id='BMCalc' className='proj-button'>
+                        <h2>BMCalc</h2>
+                        <p>BMI and BMR Calculator</p>
+                      </button>
+                    </a>
+                  </Col>
+                  <Col>
+                    
+                    <a href='https://sleepdisorderexsys.000webhostapp.com/' target='_blank'>
+                      <button id='SleepDisorder' className='proj-button'>
+                        <h2>SleepDisorder</h2>
+                        <p>Expert System</p>
+                      </button>
+                    </a>
+                  </Col>
+                  <Col>
+                    
+                    <a href='https://stayinresort.000webhostapp.com/' target='_blank'>
+                      <button id='StayIn' className='proj-button'>
+                        <h2>StayIn Resort</h2>
+                        <p>Resort Booking website</p>
+                      </button>
+                    </a>
+                  </Col>
+                  <Col>
+                    <a href='https://gameboii.000webhostapp.com/' target='_blank'>
+                      <button id='Gameboii' className='proj-button'>
+                        <h2>Gameboii</h2>
+                        <p>Game Rent Website</p>
+                      </button>
+                    </a>
+                  </Col>
+                  <Col>
+                    <a href='https://pti-uas-food-api.vercel.app/' target='_blank'>
+                      <button id='FFG' className='proj-button'>
+                        <h2>Foodies For Groupies</h2>
+                        <p>Food Recipe Website</p>
+                      </button>
+                    </a>
+                  </Col>
+                  <Col>
+                    <a href='https://umn.itch.io/witchahead' target='_blank'>
+                      <button id='WitchAhead' className='proj-button'>
+                        <h2>WitchAhead</h2>
+                        <p>Game</p>
+                      </button>
+                    </a>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+          </div>
+
           {/* Contact Section */}
           <div id='contact' className='bg-white text-dark jumbotron jumbotron-fluid p-5'>
             <div className='reveal'>
