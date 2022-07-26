@@ -13,8 +13,8 @@
 
 .profpic{
   padding: 20px;
-  width: 300px;
-  height: 300px;
+  width: 500px;
+  height: 500px;
   margin: 0 auto;
   border-radius: 50%;
 }
@@ -79,6 +79,7 @@
 
 #welcome{
   margin-bottom: -10px;
+  height: 80vh;
 }
 
 #projects{
@@ -175,6 +176,7 @@
   color: rgb(63, 125, 206);
   font-size: 18px;
 }
+
 
 /* Animate on Scroll */
 .reveal{

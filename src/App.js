@@ -1,6 +1,10 @@
 import './App.css';
+import React, { useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button ,NavDropdown, Nav, Container, Navbar, Row, Col} from 'react-bootstrap';
+import AOS from 'aos';
+import "aos/dist/aos.css";
+
 
 function App() {
   // Animate On Scroll Script start
@@ -20,6 +24,13 @@ function App() {
     }
   }
   
+  useEffect(() => {
+    AOS.init({
+      duration : 1000
+    });
+    AOS.refresh();
+  }, []);
+
   window.addEventListener("scroll", reveal);
   // Animate On Scroll Script end
 
@@ -40,33 +51,34 @@ function App() {
       </Navbar>
         
         {/* Welcome Section */}
-        <div id='welcome' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5 '>
-          <img className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
-          <h1>Hi, I'm Umar!</h1>
-          <p>
+        <div  id='welcome' className='bg-black text-white text-center p-5 '>
+          
+          <img data-aos="zoom-in-up" className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
+          <h1 data-aos="fade-up" data-aos-delay="500">Hi, I'm Umar!</h1>
+          <p data-aos="fade-up" data-aos-delay="800">
             Welcome to my personal website. This site will provide informations
             about myself. 
           </p>
         </div>
-        <div className='bg-black text-center'>
+        <div  className='bg-white text-center'>
           <a href='#moreaboutme'>
-            <button className='scrollBtn text-center'>Scroll Down!</button>
+            <button data-aos="fade-up" data-aos-delay="1000" className='scrollBtn text-center'>Scroll Down!</button>
           </a>
         </div>
 
         {/* About Me Section */}
-        <div id='moreaboutme' className='bg-white text-black jumbotron jumbotron-fluid p-5 mt-5'>
-          <div className='reveal'>
+        <div id='moreaboutme' className='bg-white text-black jumbotron jumbotron p-5 mt-5'>
+          <div data-aos="fade-up">
             <Container>
               <Row className='text-center'>
                 <Col>
-                  <div class="a-box">
+                  <div data-aos="fade-up" class="a-box">
                     <div class="img-container">
                       <div class="img-inner">
                         <img className='text-center mr-2' src="https://cdn.discordapp.com/attachments/989301099422949466/989309224943235072/pp-removebg-preview.png"/>
                       </div>
                     </div>
-                    <div class="text-container">
+                    <div  class="text-container">
                       <h3>Umar Haqi</h3>
                       <div>
                         <p>Front-End Developer</p>
@@ -74,7 +86,7 @@ function App() {
                     </div>
                   </div>
                 </Col>
-                <Col className='mt-4 col-md-6'>
+                <Col data-aos="fade-up" data-aos-delay="800" className='mt-4 col-md-6'>
                   <h1 className='text-center text-uppercase m-2'>About Me</h1>
                   <p className='text-justify m-4'>
                     I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React. 
@@ -99,47 +111,47 @@ function App() {
           <div className='reveal'>
             <Container>
               <Row className='text-center'>
-                <Col>
+                <Col data-aos="fade-up" data-aos-duration="1000">
                   <h1 className='m-3'>My Skills</h1>
                 </Col>
               </Row>
               <Row className='text-center'>
-                <Col >
+                <Col data-aos="fade-up" data-aos-duration="1000">
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/1051/1051277.png'/>
                   <p>HTML</p>
                   <p>⭐⭐⭐⭐⭐</p>
                 </Col>
-                <Col>
+                <Col data-aos="fade-up" data-aos-duration="1000">
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/732/732190.png'/>
                   <p>CSS</p>
                   <p>⭐⭐⭐⭐⭐</p>
                 </Col>
-                <Col>
+                <Col data-aos="fade-up" data-aos-duration="1000">
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/3334/3334886.png'/>
                   <p>ReactJS</p>
                   <p>⭐⭐⭐⭐</p>
                 </Col>
-                <Col>
+                <Col data-aos="fade-up" data-aos-duration="1000">
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968672.png'/>
                   <p>Bootstrap</p>
                   <p>⭐⭐⭐⭐</p>
                 </Col>
-                <Col>
+                <Col data-aos="fade-up" data-aos-duration="1000">
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png'/>
                   <p>Javascript</p>
                   <p>⭐⭐⭐</p>
                 </Col>
-                <Col>
+                <Col data-aos="fade-up" data-aos-duration="1000">
                   <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968332.png'/>
                   <p>PHP</p>
                   <p>⭐⭐⭐</p>
                 </Col>
-                <Col>
+                <Col data-aos="fade-up" data-aos-duration="1000">
                   <img className='skill-pic mt-3' src='https://ionicacademy.com/wp-content/uploads/2017/06/ionic-logo-portrait.png'/>
                   <p>Ionic</p>
                   <p>⭐⭐⭐</p>
                 </Col>
-                <Col>
+                <Col data-aos="fade-up" data-aos-duration="1000">
                   <img className='skill-pic mt-3' src='https://cdn.discordapp.com/attachments/989301099422949466/1001013427298373702/codeigniter.png'/>
                   <p>CodeIgniter</p>
                   <p>⭐⭐⭐</p>
@@ -155,7 +167,7 @@ function App() {
               <h1 className='text-uppercase m-5'>My Projects</h1>
               <Container>
                 <Row>
-                  <Col>
+                  <Col data-aos="fade-up" data-aos-duration="1000">
                     <a href='https://waddup-eta.vercel.app/' target='_blank'>
                       <button id='Waddup' className='proj-button'>
                         <h2>Waddup</h2>
@@ -163,7 +175,7 @@ function App() {
                       </button>
                     </a>
                   </Col>
-                  <Col>
+                  <Col data-aos="fade-up" data-aos-duration="1000">
                     <a href='http://bmi-and-bmr-calc.vercel.app/' target='_blank'>
                       <button id='BMCalc' className='proj-button'>
                         <h2>BMCalc</h2>
@@ -171,7 +183,7 @@ function App() {
                       </button>
                     </a>
                   </Col>
-                  <Col>
+                  <Col data-aos="fade-up" data-aos-duration="1000">
                     
                     <a href='https://sleepdisorderexsys.000webhostapp.com/' target='_blank'>
                       <button id='SleepDisorder' className='proj-button'>
@@ -180,7 +192,7 @@ function App() {
                       </button>
                     </a>
                   </Col>
-                  <Col>
+                  <Col data-aos="fade-up" data-aos-duration="1000">
                     
                     <a href='https://stayinresort.000webhostapp.com/' target='_blank'>
                       <button id='StayIn' className='proj-button'>
@@ -189,7 +201,7 @@ function App() {
                       </button>
                     </a>
                   </Col>
-                  <Col>
+                  <Col data-aos="fade-up" data-aos-duration="1000">
                     <a href='https://gameboii.000webhostapp.com/' target='_blank'>
                       <button id='Gameboii' className='proj-button'>
                         <h2>Gameboii</h2>
@@ -197,7 +209,7 @@ function App() {
                       </button>
                     </a>
                   </Col>
-                  <Col>
+                  <Col data-aos="fade-up" data-aos-duration="1000">
                     <a href='https://pti-uas-food-api.vercel.app/' target='_blank'>
                       <button id='FFG' className='proj-button'>
                         <h2>Foodies For Groupies</h2>
@@ -205,7 +217,7 @@ function App() {
                       </button>
                     </a>
                   </Col>
-                  <Col>
+                  <Col data-aos="fade-up" data-aos-duration="1000">
                     <a href='https://umn.itch.io/witchahead' target='_blank'>
                       <button id='WitchAhead' className='proj-button'>
                         <h2>WitchAhead</h2>
@@ -220,19 +232,19 @@ function App() {
 
           {/* Contact Section */}
           <div id='contact' className='bg-white text-dark jumbotron jumbotron-fluid p-5'>
-            <div className='reveal'>
+            <div data-aos="fade-up">
               <h1 className='text-center text-uppercase mb-4'>Contacts</h1>
-              <p className='text-center'>
+              <p data-aos="fade-up" className='text-center'>
                 <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/597/597177.png'/>
                 +6287878712774
               </p>
-              <p className='text-center'>
+              <p data-aos="fade-up" className='text-center'>
                 <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/646/646135.png'/>
                 umarhaqi9@gmail.com
               </p>
               
-              <p className='text-center m-4'>Here are a few of my social media profiles :</p>
-              <Container className='text-center'>
+              <p data-aos="fade-up" className='text-center m-4'>Here are a few of my social media profiles :</p>
+              <Container data-aos="fade-up" className='text-center'>
                 <Row>
                   <Col>
                     <Button variant='black' className='bg-black text-white rounded-pill m-1' href='https://github.com/umarhaqi9' target='_blank'>
