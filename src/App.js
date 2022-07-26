@@ -166,6 +166,29 @@ function App() {
             <div className='reveal'>
               <h1 className='text-uppercase m-5'>My Projects</h1>
               <Container>
+                {/* <Row>
+                  <Col>
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      </a>
+                    </div>
+                  </Col>
+                </Row> */}
                 <Row>
                   <Col data-aos="fade-up" data-aos-duration="1000">
                     <a href='https://waddup-eta.vercel.app/' target='_blank'>
@@ -247,19 +270,19 @@ function App() {
               <Container data-aos="fade-up" className='text-center'>
                 <Row>
                   <Col>
-                    <Button variant='black' className='bg-black text-white rounded-pill m-1' href='https://github.com/umarhaqi9' target='_blank'>
+                    <Button variant='black' className='bg-black text-white rounded-pill m-2' href='https://github.com/umarhaqi9' target='_blank'>
                       <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172546437160/github.png'/>
                       Github
                     </Button>
                   </Col>
                   <Col>
-                    <Button variant='primary' className='text-white rounded-pill m-1' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
+                    <Button variant='primary' className='text-white rounded-pill m-2' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
                       <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/990854583083495424/linkedin.png'/>
                       LinkedIn
                     </Button>
                   </Col>
                   <Col>
-                    <Button variant='secondary' className='text-white rounded-pill m-1' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
+                    <Button variant='secondary' className='text-white rounded-pill m-2' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
                       <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172236083320/instagram.png'/>
                       Instagram
                     </Button>
