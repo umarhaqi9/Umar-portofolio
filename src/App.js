@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button ,NavDropdown, Nav, Container, Navbar, Row, Col} from 'react-bootstrap';
+import { Button ,NavDropdown, Nav, Container, Navbar, Row, Col, Carousel} from 'react-bootstrap';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import emailjs from '@emailjs/browser';
@@ -48,6 +48,13 @@ function App() {
       }, (error) => {
           console.log(error.text);
       });
+  };
+  // End of EmailJS
+
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
   };
 
   // Data
@@ -102,46 +109,53 @@ function App() {
         "id": "Waddup",
         "Name": "Waddup",
         "Desc": "Messenger App",
-        "Link": "https://waddup-eta.vercel.app/"
+        "Link": "https://waddup-eta.vercel.app/",
+        "Image": "https://cdn.discordapp.com/attachments/989301099422949466/1001764374555410453/unknown.png"
       },
       {
         "id": "BMCalc",
         "Name": "BMCalc",
         "Desc": "BMI and BMR Calculator",
-        "Link": "http://bmi-and-bmr-calc.vercel.app/"
+        "Link": "http://bmi-and-bmr-calc.vercel.app/",
+        "Image": "https://cdn.discordapp.com/attachments/989301099422949466/1001764374874161187/unknown.png"
       },
       {
         "id": "SleepDisorder",
         "Name": "SleepDisorder",
         "Desc": "Expert System",
-        "Link": "https://sleepdisorderexsys.000webhostapp.com/"
+        "Link": "https://sleepdisorderexsys.000webhostapp.com/",
+        "Image": "https://cdn.discordapp.com/attachments/989301099422949466/1001764375700459540/unknown.png"
       },
       {
         "id": "StayIn",
         "Name": "StayIn",
         "Desc": "Resort Booking Website",
-        "Link": "https://stayinresort.000webhostapp.com/"
+        "Link": "https://stayinresort.000webhostapp.com/",
+        "Image": "https://cdn.discordapp.com/attachments/989301099422949466/1001764606076788736/unknown.png"
       },
       {
         "id": "Gameboii",
         "Name": "Gameboii",
         "Desc": "Game Rent Website",
-        "Link": "https://gameboii.000webhostapp.com/"
+        "Link": "https://gameboii.000webhostapp.com/",
+        "Image": "https://cdn.discordapp.com/attachments/989301099422949466/1001764606479433798/unknown.png"
       },
       {
         "id": "FFG",
         "Name": "Foodies For Groupies",
         "Desc": "Food Recipe Website",
-        "Link": "https://pti-uas-food-api.vercel.app/"
+        "Link": "https://pti-uas-food-api.vercel.app/",
+        "Image": "https://cdn.discordapp.com/attachments/989301099422949466/1001765024450224208/unknown.png"
       },
       {
         "id": "WitchAhead",
         "Name": "WitchAhead",
         "Desc": "Game",
-        "Link": "https://umn.itch.io/witchahead"
+        "Link": "https://umn.itch.io/witchahead",
+        "Image": "https://cdn.discordapp.com/attachments/989301099422949466/1001765226980593664/unknown.png"
       },
     ]
-  }
+  };
 
   
 
@@ -248,29 +262,25 @@ function App() {
         <div id='projects' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
             <h1 data-aos="fade-up" className='text-uppercase m-5'>My Projects</h1>
             <Container>
-              {/* <Row>
-                <Col>
-                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
-                      </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </a>
-                  </div>
-                </Col>
-              </Row> */}
+              <Row data-aos="fade-up">
+                <Carousel activeIndex={index} onSelect={handleSelect}>
+                  {projectsData.Project.map((project, i) =>
+                  {
+                    return(
+                      <Carousel.Item key={i}>
+                        <img
+                          className="d-block w-100"
+                          src={project.Image}
+                        />
+                        <Carousel.Caption>
+                          <h3>{project.Name}</h3>
+                          <p>{project.Desc}</p>
+                        </Carousel.Caption>
+                      </Carousel.Item>
+                    );
+                  })}
+                </Carousel>
+              </Row>
               <Row>
                 {projectsData.Project.map((project, index) => {
                   return(
