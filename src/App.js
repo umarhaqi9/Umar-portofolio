@@ -1,9 +1,11 @@
 import './App.css';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button ,NavDropdown, Nav, Container, Navbar, Row, Col} from 'react-bootstrap';
 import AOS from 'aos';
 import "aos/dist/aos.css";
+import emailjs from '@emailjs/browser';
+
 
 
 function App() {
@@ -33,6 +35,20 @@ function App() {
 
   window.addEventListener("scroll", reveal);
   // Animate On Scroll Script end
+
+  // EmailJS Script
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_a2w6pej', 'template_63vsmyr', form.current, 'r64VvUaQDUtl1e-ip')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
 
   // Data
   const skillsData = {
@@ -221,7 +237,6 @@ function App() {
                   );
                 })
                 }
-                
               </Row>
             </Container>
           </div>
@@ -229,9 +244,8 @@ function App() {
 
           
 
-        {/* Projects Trial*/}
+        {/* Projects*/}
         <div id='projects' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
-          
             <h1 data-aos="fade-up" className='text-uppercase m-5'>My Projects</h1>
             <Container>
               {/* <Row>
@@ -274,45 +288,87 @@ function App() {
             </Container>
         </div>
 
-          {/* Contact Section */}
-          <div id='contact' className='bg-white text-dark jumbotron jumbotron-fluid p-5'>
-            <div data-aos="fade-up">
-              <h1 className='text-center text-uppercase mb-4'>Contacts</h1>
-              <p data-aos="fade-up" className='text-center'>
-                <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/597/597177.png'/>
-                +6287878712774
-              </p>
-              <p data-aos="fade-up" className='text-center'>
-                <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/646/646135.png'/>
-                umarhaqi9@gmail.com
-              </p>
-              
-              <p data-aos="fade-up" className='text-center m-4'>Here are a few of my social media profiles :</p>
-              <Container data-aos="fade-up" className='text-center'>
-                <Row>
-                  <Col>
-                    <Button variant='black' className='bg-black text-white rounded-pill m-2' href='https://github.com/umarhaqi9' target='_blank'>
-                      <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172546437160/github.png'/>
-                      Github
-                    </Button>
-                  </Col>
-                  <Col>
-                    <Button variant='primary' className='text-white rounded-pill m-2' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
-                      <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/990854583083495424/linkedin.png'/>
-                      LinkedIn
-                    </Button>
-                  </Col>
-                  <Col>
-                    <Button variant='secondary' className='text-white rounded-pill m-2' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
-                      <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172236083320/instagram.png'/>
-                      Instagram
-                    </Button>
-                  </Col>
-                </Row>
-              </Container>
-            </div>
-            
+        {/* Contact Section */}
+        <div id='contact' className='bg-white text-dark jumbotron jumbotron-fluid p-5'>
+          <div data-aos="fade-up">
+            <Container className='p-3'>
+              <Row>
+                <Col className='mb-3'>
+                  <Row>
+                    <h1 className=' text-uppercase mb-4'>Contacts</h1>
+                  </Row>
+                  <Row>
+                    <p data-aos="fade-up" className=''>
+                      <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/597/597177.png'/>
+                      +6287878712774
+                    </p>
+                  </Row>
+                  <Row>
+                    <p data-aos="fade-up" className=''>
+                      <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/646/646135.png'/>
+                      umarhaqi9@gmail.com
+                    </p>
+                  </Row>
+                  <Row>
+                    <p data-aos="fade-up">Here are a few of my social media profiles :</p>
+                  </Row>
+                  <Row>
+                    <Container data-aos="fade-up" className=''>
+                      <Row>
+                        <Col>
+                          <Button variant='black' className='bg-black text-white rounded-pill mt-2' href='https://github.com/umarhaqi9' target='_blank'>
+                            <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172546437160/github.png'/>
+                            Github
+                          </Button>
+                        </Col>
+                        <Col>
+                          <Button variant='primary' className='text-white rounded-pill mt-2' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
+                            <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/990854583083495424/linkedin.png'/>
+                            LinkedIn
+                          </Button>
+                        </Col>
+                        <Col>
+                          <Button variant='secondary' className='text-white rounded-pill mt-2' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
+                            <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172236083320/instagram.png'/>
+                            Instagram
+                          </Button>
+                        </Col>
+                      </Row>
+                    </Container>
+                  </Row>
+                </Col>
+
+                {/* Email form */}
+                <Col>
+                  <h1 data-aos="fade-up" className='text-right m-2 mb-3 mt-3'>Direct Contact</h1>
+                  <p data-aos="fade-up" className='text-center'>
+                    If you have any feedbacks, critics, job offer, or anything you want to discuss,
+                    feel free to contact me by filling out this form!
+                  </p>
+                  <Container>
+                    <Row>
+                        <form ref={form} onSubmit={sendEmail}>
+                          <div data-aos="fade-up" data-aos-delay="450" class="form-group m-3">
+                            <label for="name">Name</label>
+                            <input type="text" name="user_name" class="form-control" id="name"  placeholder="Enter Name"/>
+                          </div>
+                          <div data-aos="fade-up" data-aos-delay="450" class="form-group m-3">
+                            <label for="email">Email address</label>
+                            <input type="email" name="user_email" class="form-control" id="email" placeholder="Enter Email"/>
+                          </div>
+                          <div data-aos="fade-up" data-aos-delay="450" class="form-group m-3">
+                            <label for="message">Message</label>
+                            <textarea name="message" class="form-control" rows="4" id="message" placeholder="Enter Message..."/>
+                          </div>
+                          <button type="submit" class="btn btn-primary m-3 submitBtn" data-aos="fade-up" data-aos-delay="450" value="Send">Send</button>
+                        </form>
+                    </Row>
+                  </Container>
+                </Col>
+              </Row>
+            </Container>
           </div>
+        </div>
         
         {/* Footer */}
         <div id='footer' class="text-center p-4 bg-black text-white">

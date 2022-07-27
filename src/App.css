@@ -177,6 +177,13 @@
   font-size: 18px;
 }
 
+.submitBtn{
+  transition: 0.4s ease;
+}
+.submitBtn:hover{
+  transform: scale(1.17);
+  transition: 0.4s ease;
+}
 
 /* Animate on Scroll */
 .reveal{
