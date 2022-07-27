@@ -244,9 +244,11 @@ function App() {
                 {skillsData.Skill.map((skill, index) => {
                   return(
                     <Col data-aos="fade-up" data-aos-delay="300" key={index}>
-                      <img className='skill-pic mt-3' src={skill.Logo}/>
-                      <p>{skill.Name}</p>
-                      <p>{skill.Rating}</p>
+                      <Container className='skillCard'>
+                        <img className='skill-pic mt-3' src={skill.Logo}/>
+                        <p>{skill.Name}</p>
+                        <p>{skill.Rating}</p>
+                      </Container>
                     </Col>
                   );
                 })
@@ -263,18 +265,18 @@ function App() {
             <h1 data-aos="fade-up" className='text-uppercase m-5'>My Projects</h1>
             <Container>
               <Row data-aos="fade-up">
-                <Carousel activeIndex={index} onSelect={handleSelect}>
+                <Carousel className=' mt-3 mb-4' activeIndex={index} onSelect={handleSelect}>
                   {projectsData.Project.map((project, i) =>
                   {
                     return(
-                      <Carousel.Item key={i}>
+                      <Carousel.Item className='text-center' key={i}>
                         <img
-                          className="d-block w-100"
+                          className="d-block w-100 projDisplay"
                           src={project.Image}
                         />
                         <Carousel.Caption>
-                          <h3>{project.Name}</h3>
-                          <p>{project.Desc}</p>
+                            <h3>{project.Name}</h3>
+                            <p>{project.Desc}</p>
                         </Carousel.Caption>
                       </Carousel.Item>
                     );
@@ -350,8 +352,8 @@ function App() {
 
                 {/* Email form */}
                 <Col>
-                  <h1 data-aos="fade-up" className='text-right m-2 mb-3 mt-3'>Direct Contact</h1>
-                  <p data-aos="fade-up" className='text-center'>
+                  <h1 data-aos="fade-up" className='text-right mb-3 mt-3'>Direct Contact</h1>
+                  <p data-aos="fade-up" className='text-right'>
                     If you have any feedbacks, critics, job offer, or anything you want to discuss,
                     feel free to contact me by filling out this form!
                   </p>

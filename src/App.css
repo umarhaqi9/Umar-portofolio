@@ -127,6 +127,26 @@
   width: 200px;
   height: 200px;
   margin: 0 auto;
+  transition: 0.3s ease;
+
+}
+.skill-pic:hover{
+  transform: scale(1.15);
+  transition: 0.3s ease;
+}
+
+.skillCard{
+  padding: 10px;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+.skillCard:hover{
+  transition: 0.3s ease;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
+  transform: translateY(-10px);
 }
 
 .skills{
@@ -184,6 +204,11 @@
   transform: scale(1.17);
   transition: 0.4s ease;
 }
+
+.projDisplay{
+  max-height: 40rem;
+}
+
 
 
 /* Animate on Scroll */
