@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button ,NavDropdown, Nav, Container, Navbar, Row, Col} from 'react-bootstrap';
 import AOS from 'aos';
@@ -33,6 +33,101 @@ function App() {
 
   window.addEventListener("scroll", reveal);
   // Animate On Scroll Script end
+
+  // Data
+  const skillsData = {
+    "Skill": [
+      {
+        "Name": "HTML",
+        "Logo": "https://cdn-icons-png.flaticon.com/512/1051/1051277.png",
+        "Rating": "⭐⭐⭐⭐⭐"
+      },
+      {
+        "Name": "CSS",
+        "Logo": "https://cdn-icons-png.flaticon.com/512/732/732190.png",
+        "Rating": "⭐⭐⭐⭐⭐"
+      },
+      {
+        "Name": "ReactJS",
+        "Logo": "https://cdn-icons-png.flaticon.com/512/3334/3334886.png",
+        "Rating": "⭐⭐⭐⭐"
+      },
+      {
+        "Name": "Bootstrap",
+        "Logo": "https://cdn-icons-png.flaticon.com/512/5968/5968672.png",
+        "Rating": "⭐⭐⭐⭐"
+      },
+      {
+        "Name": "Javascript",
+        "Logo": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+        "Rating": "⭐⭐⭐"
+      },
+      {
+        "Name": "PHP",
+        "Logo": "https://cdn-icons-png.flaticon.com/512/5968/5968332.png",
+        "Rating": "⭐⭐⭐"
+      },
+      {
+        "Name": "Ionic",
+        "Logo": "https://ionicacademy.com/wp-content/uploads/2017/06/ionic-logo-portrait.png",
+        "Rating": "⭐⭐⭐"
+      },
+      {
+        "Name": "CodeIgniter",
+        "Logo": "https://cdn.discordapp.com/attachments/989301099422949466/1001013427298373702/codeigniter.png",
+        "Rating": "⭐⭐⭐"
+      },
+    ]
+  };
+
+  const projectsData = {
+    "Project": [
+      {
+        "id": "Waddup",
+        "Name": "Waddup",
+        "Desc": "Messenger App",
+        "Link": "https://waddup-eta.vercel.app/"
+      },
+      {
+        "id": "BMCalc",
+        "Name": "BMCalc",
+        "Desc": "BMI and BMR Calculator",
+        "Link": "http://bmi-and-bmr-calc.vercel.app/"
+      },
+      {
+        "id": "SleepDisorder",
+        "Name": "SleepDisorder",
+        "Desc": "Expert System",
+        "Link": "https://sleepdisorderexsys.000webhostapp.com/"
+      },
+      {
+        "id": "StayIn",
+        "Name": "StayIn",
+        "Desc": "Resort Booking Website",
+        "Link": "https://stayinresort.000webhostapp.com/"
+      },
+      {
+        "id": "Gameboii",
+        "Name": "Gameboii",
+        "Desc": "Game Rent Website",
+        "Link": "https://gameboii.000webhostapp.com/"
+      },
+      {
+        "id": "FFG",
+        "Name": "Foodies For Groupies",
+        "Desc": "Food Recipe Website",
+        "Link": "https://pti-uas-food-api.vercel.app/"
+      },
+      {
+        "id": "WitchAhead",
+        "Name": "WitchAhead",
+        "Desc": "Game",
+        "Link": "https://umn.itch.io/witchahead"
+      },
+    ]
+  }
+
+  
 
   return (
     <div className='App'>
@@ -94,10 +189,10 @@ function App() {
                     I am a very "try hard" person to achive the best outcome with the best of my abilites. It's not always perfect, but I will always make sure to give
                     the best I can to finish a project. 
                   </p>
-                    <a href='https://cdn.discordapp.com/attachments/989301099422949466/1001006420814200862/Umar_Haqi_CV.pdf' target="_blank" download>
+                    <a href='https://drive.google.com/file/d/1VzOISpCT1-o2oTP0y3tlkvOnOuv_I_VL/view?usp=sharing' target="_blank" download>
                       <button className='personal-button'>CV</button>
                     </a>
-                    <a href='https://cdn.discordapp.com/attachments/989301099422949466/1001006421132984320/Umar_Haqi_Portofolio.pdf' target="_blank" download>
+                    <a href='https://drive.google.com/file/d/1CIygLbbTdiCorui2nJm-1tT-tGZ0Itt-/view?usp=sharing' target="_blank" download>
                       <button className='personal-button'>Portofolio (PDF ver.)</button>
                     </a>
                 </Col>
@@ -106,152 +201,78 @@ function App() {
           </div>
         </div>
 
-        {/* Skills Section */}
+        {/* Skills Section*/}
         <div className='skills text-black jumbotron jumbotron-fluid p-5'>
           <div className='reveal'>
             <Container>
               <Row className='text-center'>
-                <Col data-aos="fade-up" data-aos-duration="1000">
+                <Col data-aos="fade-up">
                   <h1 className='m-3'>My Skills</h1>
                 </Col>
               </Row>
               <Row className='text-center'>
-                <Col data-aos="fade-up" data-aos-duration="1000">
-                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/1051/1051277.png'/>
-                  <p>HTML</p>
-                  <p>⭐⭐⭐⭐⭐</p>
-                </Col>
-                <Col data-aos="fade-up" data-aos-duration="1000">
-                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/732/732190.png'/>
-                  <p>CSS</p>
-                  <p>⭐⭐⭐⭐⭐</p>
-                </Col>
-                <Col data-aos="fade-up" data-aos-duration="1000">
-                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/3334/3334886.png'/>
-                  <p>ReactJS</p>
-                  <p>⭐⭐⭐⭐</p>
-                </Col>
-                <Col data-aos="fade-up" data-aos-duration="1000">
-                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968672.png'/>
-                  <p>Bootstrap</p>
-                  <p>⭐⭐⭐⭐</p>
-                </Col>
-                <Col data-aos="fade-up" data-aos-duration="1000">
-                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png'/>
-                  <p>Javascript</p>
-                  <p>⭐⭐⭐</p>
-                </Col>
-                <Col data-aos="fade-up" data-aos-duration="1000">
-                  <img className='skill-pic mt-3' src='https://cdn-icons-png.flaticon.com/512/5968/5968332.png'/>
-                  <p>PHP</p>
-                  <p>⭐⭐⭐</p>
-                </Col>
-                <Col data-aos="fade-up" data-aos-duration="1000">
-                  <img className='skill-pic mt-3' src='https://ionicacademy.com/wp-content/uploads/2017/06/ionic-logo-portrait.png'/>
-                  <p>Ionic</p>
-                  <p>⭐⭐⭐</p>
-                </Col>
-                <Col data-aos="fade-up" data-aos-duration="1000">
-                  <img className='skill-pic mt-3' src='https://cdn.discordapp.com/attachments/989301099422949466/1001013427298373702/codeigniter.png'/>
-                  <p>CodeIgniter</p>
-                  <p>⭐⭐⭐</p>
-                </Col>
+                {skillsData.Skill.map((skill, index) => {
+                  return(
+                    <Col data-aos="fade-up" data-aos-delay="300" key={index}>
+                      <img className='skill-pic mt-3' src={skill.Logo}/>
+                      <p>{skill.Name}</p>
+                      <p>{skill.Rating}</p>
+                    </Col>
+                  );
+                })
+                }
+                
               </Row>
             </Container>
           </div>
         </div>
 
-          {/* Projects Section */}
-          <div id='projects' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
-            <div className='reveal'>
-              <h1 className='text-uppercase m-5'>My Projects</h1>
-              <Container>
-                {/* <Row>
-                  <Col>
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                      <div class="carousel-inner">
-                        <div class="carousel-item active">
-                          <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
-                        </div>
-                        <div class="carousel-item">
-                          <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
-                        </div>
-                        <div class="carousel-item">
-                          <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
-                        </div>
+          
+
+        {/* Projects Trial*/}
+        <div id='projects' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
+          
+            <h1 data-aos="fade-up" className='text-uppercase m-5'>My Projects</h1>
+            <Container>
+              {/* <Row>
+                <Col>
+                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
                       </div>
-                      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      </a>
+                      <div class="carousel-item">
+                        <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://cdn.discordapp.com/attachments/841587576464736266/986560455210332180/20220615_161758.jpg" class="d-block w-100"/>
+                      </div>
                     </div>
-                  </Col>
-                </Row> */}
-                <Row>
-                  <Col data-aos="fade-up" data-aos-duration="1000">
-                    <a href='https://waddup-eta.vercel.app/' target='_blank'>
-                      <button id='Waddup' className='proj-button'>
-                        <h2>Waddup</h2>
-                        <p>Messenger App</p>
-                      </button>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </a>
-                  </Col>
-                  <Col data-aos="fade-up" data-aos-duration="1000">
-                    <a href='http://bmi-and-bmr-calc.vercel.app/' target='_blank'>
-                      <button id='BMCalc' className='proj-button'>
-                        <h2>BMCalc</h2>
-                        <p>BMI and BMR Calculator</p>
-                      </button>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
-                  </Col>
-                  <Col data-aos="fade-up" data-aos-duration="1000">
-                    
-                    <a href='https://sleepdisorderexsys.000webhostapp.com/' target='_blank'>
-                      <button id='SleepDisorder' className='proj-button'>
-                        <h2>SleepDisorder</h2>
-                        <p>Expert System</p>
-                      </button>
-                    </a>
-                  </Col>
-                  <Col data-aos="fade-up" data-aos-duration="1000">
-                    
-                    <a href='https://stayinresort.000webhostapp.com/' target='_blank'>
-                      <button id='StayIn' className='proj-button'>
-                        <h2>StayIn Resort</h2>
-                        <p>Resort Booking website</p>
-                      </button>
-                    </a>
-                  </Col>
-                  <Col data-aos="fade-up" data-aos-duration="1000">
-                    <a href='https://gameboii.000webhostapp.com/' target='_blank'>
-                      <button id='Gameboii' className='proj-button'>
-                        <h2>Gameboii</h2>
-                        <p>Game Rent Website</p>
-                      </button>
-                    </a>
-                  </Col>
-                  <Col data-aos="fade-up" data-aos-duration="1000">
-                    <a href='https://pti-uas-food-api.vercel.app/' target='_blank'>
-                      <button id='FFG' className='proj-button'>
-                        <h2>Foodies For Groupies</h2>
-                        <p>Food Recipe Website</p>
-                      </button>
-                    </a>
-                  </Col>
-                  <Col data-aos="fade-up" data-aos-duration="1000">
-                    <a href='https://umn.itch.io/witchahead' target='_blank'>
-                      <button id='WitchAhead' className='proj-button'>
-                        <h2>WitchAhead</h2>
-                        <p>Game</p>
-                      </button>
-                    </a>
-                  </Col>
-                </Row>
-              </Container>
-            </div>
-          </div>
+                  </div>
+                </Col>
+              </Row> */}
+              <Row>
+                {projectsData.Project.map((project, index) => {
+                  return(
+                    <Col data-aos="fade-up" data-aos-delay="350" key={index}>
+                      <a href={project.Link} target='_blank'>
+                        <button id={project.id} className='proj-button'>
+                          <h2>{project.Name}</h2>
+                          <p>{project.Desc}</p>
+                        </button>
+                      </a>
+                    </Col>
+                  )
+                })}
+              </Row>
+            </Container>
+        </div>
 
           {/* Contact Section */}
           <div id='contact' className='bg-white text-dark jumbotron jumbotron-fluid p-5'>
