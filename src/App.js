@@ -269,25 +269,6 @@ function App() {
         <div id='projects' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
             <h1 data-aos="fade-up" className='text-uppercase m-5'>My Projects</h1>
             <Container>
-              <Row className='display-proj' data-aos="fade-up">
-                {/* <Carousel className='mt-3 mb-4' activeIndex={index} onSelect={handleSelect}>
-                  {projectsData.Project.map((project, i) =>
-                  {
-                    return(
-                      <Carousel.Item className='text-center' key={i}>
-                        <img
-                          className="d-block w-100 projDisplay"
-                          src={project.Image}
-                        />
-                        <Carousel.Caption>
-                            <h3>{project.Name}</h3>
-                            <p>{project.Desc}</p>
-                        </Carousel.Caption>
-                      </Carousel.Item>
-                    );
-                  })}
-                </Carousel> */}
-              </Row>
               <Row>
                 {projectsData.Project.map((project, index) => {
                   return(
@@ -313,7 +294,7 @@ function App() {
           <div data-aos="fade-up">
             <Container className='p-3'>
               <Row>
-                <Col className='mb-3'>
+                <Col className='mb-5'>
                   <Row>
                     <h1 className=' text-uppercase mb-4'>Contacts</h1>
                   </Row>
@@ -332,7 +313,7 @@ function App() {
                   <Row>
                     <p data-aos="fade-up">Here are a few of my social media profiles :</p>
                   </Row>
-                  <Row>
+                  <Row className='text-center float-left'>
                     <Container data-aos="fade-up" className=''>
                       <Row>
                         <Col>
@@ -360,8 +341,8 @@ function App() {
 
                 {/* Email form */}
                 <Col>
-                  <h1 data-aos="fade-up" className='text-right mb-3 mt-3'>Direct Contact</h1>
-                  <p data-aos="fade-up" className='text-right'>
+                  <h1 data-aos="fade-up" className='text-right mb-3 '>Direct Contact</h1>
+                  <p data-aos="fade-up" className='text-justify'>
                     If you have any feedbacks, critics, job offer, or anything you want to discuss,
                     feel free to contact me by filling out this form!
                   </p>
