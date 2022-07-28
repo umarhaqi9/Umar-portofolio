@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button ,Card, Nav, Container, Navbar, Row, Col, Carousel} from 'react-bootstrap';
+import { Button ,Alert, Nav, Container, Navbar, Row, Col, Carousel} from 'react-bootstrap';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import emailjs from '@emailjs/browser';
@@ -38,6 +38,7 @@ function App() {
 
   // EmailJS Script
   const form = useRef();
+  const [showAlert, setShowAlert] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -45,17 +46,14 @@ function App() {
     emailjs.sendForm('service_a2w6pej', 'template_63vsmyr', form.current, 'r64VvUaQDUtl1e-ip')
       .then((result) => {
           console.log(result.text);
+          setShowAlert(true);
       }, (error) => {
           console.log(error.text);
       });
   };
   // End of EmailJS
 
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+  
 
   // Data
   const skillsData = {
@@ -166,6 +164,9 @@ function App() {
 
   return (
     <div className='App'>
+      <Alert variant='success' isOpen={showAlert} duration={1000} >
+        Your feedback has been <strong>sent!</strong>
+      </Alert>
       <Navbar className='fixed-top p-2' bg="black" variant='dark' expand="lg">
         <Container>
           <Navbar.Brand href="#welcome">Umar Haqi</Navbar.Brand>
@@ -247,7 +248,7 @@ function App() {
               <Row className='text-center'>
                 {skillsData.Skill.map((skill, index) => {
                   return(
-                    <Col className='skillCard' data-aos="fade-up" data-aos-delay="300" key={index}>
+                    <Col className='skill-card' data-aos="fade-up" data-aos-delay="300" key={index}>
                         <img className='skill-pic mt-3' src={skill.Logo}/>
                         <p>{skill.Name}</p>
                         <p>{skill.Rating}</p>
@@ -258,8 +259,6 @@ function App() {
               </Row>
             </Container>
         </div>
-
-          
 
         {/* Projects*/}
         <div id='projects' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
@@ -310,22 +309,22 @@ function App() {
                     <p data-aos="fade-up">Here are a few of my social media profiles :</p>
                   </Row>
                   <Row className='text-center float-left'>
-                    <Container data-aos="fade-up" className=''>
+                    <Container data-aos="fade-up" >
                       <Row>
                         <Col>
-                          <Button variant='black' className='bg-black text-white rounded-pill mt-2' href='https://github.com/umarhaqi9' target='_blank'>
+                          <Button variant='black' className='bg-black text-white rounded-pill mt-3' href='https://github.com/umarhaqi9' target='_blank'>
                             <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172546437160/github.png'/>
                             Github
                           </Button>
                         </Col>
                         <Col>
-                          <Button variant='primary' className='text-white rounded-pill mt-2' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
+                          <Button variant='primary' className='text-white rounded-pill mt-3' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
                             <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/990854583083495424/linkedin.png'/>
                             LinkedIn
                           </Button>
                         </Col>
                         <Col>
-                          <Button variant='secondary' className='text-white rounded-pill mt-2' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
+                          <Button variant='secondary' className='text-white rounded-pill mt-3' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
                             <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172236083320/instagram.png'/>
                             Instagram
                           </Button>
