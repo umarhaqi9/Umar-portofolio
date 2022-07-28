@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button ,NavDropdown, Nav, Container, Navbar, Row, Col, Carousel} from 'react-bootstrap';
+import { Button ,Card, Nav, Container, Navbar, Row, Col, Carousel} from 'react-bootstrap';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import emailjs from '@emailjs/browser';
@@ -99,6 +99,11 @@ function App() {
         "Name": "CodeIgniter",
         "Logo": "https://cdn.discordapp.com/attachments/989301099422949466/1001013427298373702/codeigniter.png",
         "Rating": "⭐⭐⭐"
+      },
+      {
+        "Name": "Figma",
+        "Logo": "https://brandlogos.net/wp-content/uploads/2022/05/figma-logo_brandlogos.net_6n1pb.png",
+        "Rating": "⭐⭐⭐⭐"
       },
     ]
   };
@@ -243,12 +248,12 @@ function App() {
               <Row className='text-center'>
                 {skillsData.Skill.map((skill, index) => {
                   return(
-                    <Col data-aos="fade-up" data-aos-delay="300" key={index}>
-                      <Container className='skillCard'>
+                    <Col className='skillCard' data-aos="fade-up" data-aos-delay="300" key={index}>
+                      {/* <Container className='skillCard'> */}
                         <img className='skill-pic mt-3' src={skill.Logo}/>
                         <p>{skill.Name}</p>
                         <p>{skill.Rating}</p>
-                      </Container>
+                      {/* </Container> */}
                     </Col>
                   );
                 })
@@ -264,8 +269,8 @@ function App() {
         <div id='projects' className='bg-black text-white jumbotron jumbotron-fluid text-center p-5'>
             <h1 data-aos="fade-up" className='text-uppercase m-5'>My Projects</h1>
             <Container>
-              <Row data-aos="fade-up">
-                <Carousel className=' mt-3 mb-4' activeIndex={index} onSelect={handleSelect}>
+              <Row className='display-proj' data-aos="fade-up">
+                {/* <Carousel className='mt-3 mb-4' activeIndex={index} onSelect={handleSelect}>
                   {projectsData.Project.map((project, i) =>
                   {
                     return(
@@ -281,7 +286,7 @@ function App() {
                       </Carousel.Item>
                     );
                   })}
-                </Carousel>
+                </Carousel> */}
               </Row>
               <Row>
                 {projectsData.Project.map((project, index) => {
@@ -289,8 +294,11 @@ function App() {
                     <Col data-aos="fade-up" data-aos-delay="350" key={index}>
                       <a href={project.Link} target='_blank'>
                         <button id={project.id} className='proj-button'>
-                          <h2>{project.Name}</h2>
-                          <p>{project.Desc}</p>
+                          <div className='proj-name'>
+                            <h2>{project.Name}</h2>
+                            <p>{project.Desc}</p>
+                          </div>
+                          
                         </button>
                       </a>
                     </Col>
