@@ -164,9 +164,6 @@ function App() {
 
   return (
     <div className='App'>
-      <Alert variant='success' isOpen={showAlert} duration={1000} >
-        Your feedback has been <strong>sent!</strong>
-      </Alert>
       <Navbar className='fixed-top p-2' bg="black" variant='dark' expand="lg">
         <Container>
           <Navbar.Brand href="#welcome">Umar Haqi</Navbar.Brand>
