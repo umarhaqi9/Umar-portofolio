@@ -181,7 +181,7 @@ function App() {
       </Navbar>
         
         {/* Welcome Section */}
-        <div  id='welcome' className='bg-black text-white text-center p-5 '>
+        <div  id='welcome' className='bg-black text-white text-center p-5'>
           
           <img data-aos="zoom-in-up" className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
           <h1 data-aos="fade-up" data-aos-delay="500">Hi, I'm Umar!</h1>
@@ -192,7 +192,7 @@ function App() {
         </div>
         <div  className='bg-white text-center'>
           <a href='#moreaboutme'>
-            <button data-aos="fade-up" data-aos-delay="1000" className='scrollBtn text-center'>Scroll Down!</button>
+            <button data-aos="fade-up" data-aos-delay="1000" className='scrollBtn'>Scroll Down!</button>
           </a>
         </div>
 
@@ -238,7 +238,6 @@ function App() {
 
         {/* Skills Section*/}
         <div className='skills text-black jumbotron jumbotron-fluid p-5'>
-          <div className='reveal'>
             <Container>
               <Row className='text-center'>
                 <Col data-aos="fade-up">
@@ -249,18 +248,15 @@ function App() {
                 {skillsData.Skill.map((skill, index) => {
                   return(
                     <Col className='skillCard' data-aos="fade-up" data-aos-delay="300" key={index}>
-                      {/* <Container className='skillCard'> */}
                         <img className='skill-pic mt-3' src={skill.Logo}/>
                         <p>{skill.Name}</p>
                         <p>{skill.Rating}</p>
-                      {/* </Container> */}
                     </Col>
                   );
                 })
                 }
               </Row>
             </Container>
-          </div>
         </div>
 
           
@@ -299,7 +295,7 @@ function App() {
                     <h1 className=' text-uppercase mb-4'>Contacts</h1>
                   </Row>
                   <Row>
-                    <p data-aos="fade-up" className=''>
+                    <p data-aos="fade-up">
                       <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/597/597177.png'/>
                       +6287878712774
                     </p>
