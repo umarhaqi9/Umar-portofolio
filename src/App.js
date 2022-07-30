@@ -5,6 +5,8 @@ import { Button ,Alert, Nav, Container, Navbar, Row, Col, Carousel} from 'react-
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import emailjs from '@emailjs/browser';
+import { gsap } from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
 
 
 
@@ -53,7 +55,10 @@ function App() {
   };
   // End of EmailJS
 
-  
+  // GSAP
+  gsap.registerPlugin(TextPlugin);
+
+  // gsap.to(".about", {duration: 8, delay: 1.5, text: "I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React. I have been constantly trying my best to develop my front-end engineering skills for the past 2 years. I'm a very open guy to making new friends. I am a very try hard person to achive the best outcome with the best of my abilites. It's not always perfect, but I will always make sure to give the best I can to finish a project."});
 
   // Data
   const skillsData = {
@@ -190,7 +195,7 @@ function App() {
         </div>
         <div  className='bg-white text-center'>
           <a href='#moreaboutme'>
-            <button data-aos="fade-up" data-aos-delay="1000" className='scrollBtn'>Scroll Down!</button>
+            <button data-aos="fade-up" data-aos-delay="1000" className='scroll-btn '>Scroll Down!</button>
           </a>
         </div>
 
@@ -264,7 +269,7 @@ function App() {
               <Row>
                 {projectsData.Project.map((project, index) => {
                   return(
-                    <Col data-aos="fade-up" data-aos-delay="350" key={index}>
+                    <Col data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-delay="350" key={index}>
                       <a href={project.Link} target='_blank'>
                         <button id={project.id} className='proj-button'>
                           <div className='proj-name'>

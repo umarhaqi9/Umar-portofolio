@@ -113,7 +113,7 @@
   background-image: none;
 }
 
-.scrollBtn{
+.scroll-btn{
   padding: 15px;
   overflow: hidden;
   height: 60px;
@@ -127,9 +127,9 @@
   box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
   transition: 0.4s ease;
 }
-.scrollBtn:hover{
+.scroll-btn:hover{
   transform: scale(1.2);
-  transition: transform 0.4s;
+  transition: 0.4s ease;
 }
 
 #welcome{
