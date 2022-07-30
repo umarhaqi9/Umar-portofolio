@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button ,Alert, Nav, Container, Navbar, Row, Col, Carousel} from 'react-bootstrap';
+import { Button , Nav, Container, Navbar, Row, Col, Carousel} from 'react-bootstrap';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import emailjs from '@emailjs/browser';
@@ -41,13 +41,15 @@ function App() {
   // EmailJS Script
   const form = useRef();
   const [showAlert, setShowAlert] = useState(false);
-  const btnLoading = document.querySelector('.btn-loading');
-  const btnKirim = document.querySelector('.submit-btn');
-  const alertSukses = document.querySelector('.my-alert');
+  // const btnLoading = document.querySelector('.btn-loading');
+  // const btnKirim = document.querySelector('.submit-btn');
+  // const alertSukses = document.querySelector('.my-alert');
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    const btnLoading = document.querySelector('.btn-loading');
+    const btnKirim = document.querySelector('.submit-btn');
+    const alertSukses = document.querySelector('.my-alert');
     btnLoading.classList.toggle('d-none');
     btnKirim.classList.toggle('d-none');
     emailjs.sendForm('service_a2w6pej', 'template_63vsmyr', form.current, 'r64VvUaQDUtl1e-ip')
@@ -368,7 +370,7 @@ function App() {
                       <textarea name="message" className="form-control" rows="4" id="message" placeholder="Enter Message..."/>
                     </div>
                     <button type="submit" className="btn btn-primary m-3 submit-btn" data-aos="fade-up" data-aos-delay="450" value="Send">Send</button>
-                    <button className="btn btn-primary btn-loading d-none" type="button" disabled>
+                    <button className="btn btn-primary btn-loading m-3 d-none" type="button" disabled>
                       <span className="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span>
                       Loading...
                     </button>
