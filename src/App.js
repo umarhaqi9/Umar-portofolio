@@ -354,7 +354,7 @@ function App() {
                   </p>
                   <div className="alert my-alert alert-success alert-dismissible fade show d-none" role="alert">
                     <strong>Thank You!</strong> Your message has been sent.
-                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <button type="button" className="btn-close" data-dismiss="alert" aria-label="Close"></button>
                   </div>
                   <form ref={form} onSubmit={sendEmail}>
                     <div data-aos="fade-up" data-aos-delay="450" className="form-group m-3">
