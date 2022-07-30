@@ -41,14 +41,21 @@ function App() {
   // EmailJS Script
   const form = useRef();
   const [showAlert, setShowAlert] = useState(false);
+  const btnLoading = document.querySelector('.btn-loading');
+  const btnKirim = document.querySelector('.submit-btn');
+  const alertSukses = document.querySelector('.my-alert');
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    btnLoading.classList.toggle('d-none');
+    btnKirim.classList.toggle('d-none');
     emailjs.sendForm('service_a2w6pej', 'template_63vsmyr', form.current, 'r64VvUaQDUtl1e-ip')
       .then((result) => {
-          console.log(result.text);
-          setShowAlert(true);
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');  
+        console.log(result.text);
+        alertSukses.classList.toggle('d-none');
       }, (error) => {
           console.log(error.text);
       });
@@ -205,7 +212,7 @@ function App() {
             <Container>
               <Row className='text-center'>
                 <Col>
-                  <div data-aos="fade-up" class="a-box">
+                  <div data-aos="fade-up" className="a-box">
                     <div class="img-container">
                       <div class="img-inner">
                         <img className='text-center mr-2' src="https://cdn.discordapp.com/attachments/989301099422949466/989309224943235072/pp-removebg-preview.png"/>
@@ -293,7 +300,7 @@ function App() {
               <Row>
                 <Col className='mb-5'>
                   <Row>
-                    <h1 className=' text-uppercase mb-4'>Contacts</h1>
+                    <h1 className='text-uppercase mb-4'>Contacts</h1>
                   </Row>
                   <Row>
                     <p data-aos="fade-up">
@@ -302,7 +309,7 @@ function App() {
                     </p>
                   </Row>
                   <Row>
-                    <p data-aos="fade-up" className=''>
+                    <p data-aos="fade-up" >
                       <img className='icon-button' src='https://cdn-icons-png.flaticon.com/512/646/646135.png'/>
                       umarhaqi9@gmail.com
                     </p>
@@ -343,25 +350,29 @@ function App() {
                     If you have any feedbacks, critics, job offer, or anything you want to discuss,
                     feel free to contact me by filling out this form!
                   </p>
-                  <Container>
-                    <Row>
-                        <form ref={form} onSubmit={sendEmail}>
-                          <div data-aos="fade-up" data-aos-delay="450" class="form-group m-3">
-                            <label for="name">Name</label>
-                            <input type="text" name="user_name" class="form-control" id="name"  placeholder="Enter Name"/>
-                          </div>
-                          <div data-aos="fade-up" data-aos-delay="450" class="form-group m-3">
-                            <label for="email">Email address</label>
-                            <input type="email" name="user_email" class="form-control" id="email" placeholder="Enter Email"/>
-                          </div>
-                          <div data-aos="fade-up" data-aos-delay="450" class="form-group m-3">
-                            <label for="message">Message</label>
-                            <textarea name="message" class="form-control" rows="4" id="message" placeholder="Enter Message..."/>
-                          </div>
-                          <button type="submit" class="btn btn-primary m-3 submitBtn" data-aos="fade-up" data-aos-delay="450" value="Send">Send</button>
-                        </form>
-                    </Row>
-                  </Container>
+                  <div className="alert my-alert alert-success alert-dismissible fade show d-none" role="alert">
+                    <strong>Thank You!</strong> Your message has been sent.
+                    <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
+                  <form ref={form} onSubmit={sendEmail}>
+                    <div data-aos="fade-up" data-aos-delay="450" className="form-group m-3">
+                      <label for="name">Name</label>
+                      <input type="text" name="user_name" className="form-control" id="name"  placeholder="Enter Name"/>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="450" className="form-group m-3">
+                      <label for="email">Email address</label>
+                      <input type="email" name="user_email" className="form-control" id="email" placeholder="Enter Email"/>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="450" className="form-group m-3">
+                      <label for="message">Message</label>
+                      <textarea name="message" className="form-control" rows="4" id="message" placeholder="Enter Message..."/>
+                    </div>
+                    <button type="submit" className="btn btn-primary m-3 submit-btn" data-aos="fade-up" data-aos-delay="450" value="Send">Send</button>
+                    <button className="btn btn-primary btn-loading d-none" type="button" disabled>
+                      <span className="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span>
+                      Loading...
+                    </button>
+                  </form>
                 </Col>
               </Row>
             </Container>
