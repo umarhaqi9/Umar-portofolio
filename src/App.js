@@ -357,20 +357,20 @@ function App() {
                     <button type="button" className="btn-close" data-dismiss="alert" aria-label="Close"></button>
                   </div>
                   <form ref={form} onSubmit={sendEmail}>
-                    <div data-aos="fade-up" data-aos-delay="450" className="form-group m-3">
+                    <div data-aos="fade-up" data-aos-delay="450" className="form-group mt-3">
                       <label for="name">Name</label>
                       <input type="text" name="user_name" className="form-control" id="name"  placeholder="Enter Name"/>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="450" className="form-group m-3">
+                    <div data-aos="fade-up" data-aos-delay="450" className="form-group mt-3">
                       <label for="email">Email address</label>
                       <input type="email" name="user_email" className="form-control" id="email" placeholder="Enter Email"/>
                     </div>
-                    <div data-aos="fade-up" data-aos-delay="450" className="form-group m-3">
+                    <div data-aos="fade-up" data-aos-delay="450" className="form-group mt-3">
                       <label for="message">Message</label>
                       <textarea name="message" className="form-control" rows="4" id="message" placeholder="Enter Message..."/>
                     </div>
-                    <button type="submit" className="btn btn-primary m-3 submit-btn" data-aos="fade-up" data-aos-delay="450" value="Send">Send</button>
-                    <button className="btn btn-primary btn-loading m-3 d-none" type="button" disabled>
+                    <button type="submit" className="btn btn-primary mt-3 submit-btn" data-aos="fade-up" data-aos-delay="450" value="Send">Send</button>
+                    <button className="btn btn-primary btn-loading mt-3 d-none" type="button" disabled>
                       <span className="spinner-border spinner-border-sm mr-1" role="status" aria-hidden="true"></span>
                       Loading...
                     </button>
