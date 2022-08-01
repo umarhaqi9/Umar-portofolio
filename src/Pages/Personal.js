@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import emailjs from '@emailjs/browser';
 
 import VanillaTilt from 'vanilla-tilt';
-import "vanilla-tilt/dist/vanilla-tilt";
+import "vanilla-tilt/dist/vanilla-tilt.min.js";
 import basket from '../assets/basket.png';
 import bola from '../assets/bola.png';
 import audiophile from '../assets/audiophile.png';
@@ -25,10 +25,10 @@ function Personal() {
     VanillaTilt.init(document.querySelectorAll(".hobby-card"), {
         max: 25,
         speed: 400, 
-        // glare: true,
+        glare: true,
         "max-glare": .5,
-        scale: 1.1
-	});
+        scale: 1.2
+	  });
 
     // DATA
     const dataHobby = {
@@ -90,13 +90,14 @@ function Personal() {
               <Row className="d-flex justify-content-center text-center">
                 {dataHobby.Hobby.map ((hobby, i) => {
                     return(
-                        <Col className="m-3" key={i}>
+                        <Col className="m-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
                             <div id={hobby.Name} className="hobby-card ">
                                 <img src={hobby.Image}/>
                             </div>
                         </Col>
                     )
                 })}
+                
                 
               </Row>
             </Container>
