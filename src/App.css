@@ -348,6 +348,69 @@ h1{
   opacity: 0.8;
 }
 
+#Shp9500.hobby-card::before{
+  content: 'PHILLIPS';
+}
+#Shp9500.hobby-card::after{
+  content: 'SHP9500';
+  position: absolute;
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 250px;
+  left: 50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+#Shp9500.hobby-card:hover::after{
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.8;
+}
+
+#G102.hobby-card::before{
+  content: 'LOGITECH';
+}
+#G102.hobby-card::after{
+  content: 'G102';
+  position: absolute;
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 250px;
+  left: 50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+#G102.hobby-card:hover::after{
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.8;
+}
+
+#Fiio.hobby-card::before{
+  content: 'FIIO';
+}
+#Fiio.hobby-card::after{
+  content: 'M3 PRO';
+  position: absolute;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+  top: 280px;
+  left: 50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+#Fiio.hobby-card:hover::after{
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.8;
+}
+
 .hobby-card img{
   max-width: 210px;
   max-height: 210px;
@@ -356,7 +419,7 @@ h1{
 }
 
 .hobby-card:hover img{
-  transform: scale(1.5) rotate(-5deg) translate3d(0,0,50px)
+  transform: scale(1.15) rotate(-5deg) translate3d(0,0,50px)
 }
 
 

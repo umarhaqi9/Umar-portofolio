@@ -24,10 +24,10 @@ function Personal() {
     //   Vanila TiltJS
     VanillaTilt.init(document.querySelectorAll(".hobby-card"), {
         max: 25,
-        speed: 400, 
+        speed: 450, 
         glare: true,
         "max-glare": .5,
-        scale: 1.2
+        scale: 1.15
 	  });
 
     // DATA
@@ -57,6 +57,18 @@ function Personal() {
         {
           "Name": "Daiva",
           "Image": "./assets/daiva.png"
+        },
+        {
+          "Name": "Shp9500",
+          "Image": "./assets/shp9500.png"
+        },
+        {
+          "Name": "G102",
+          "Image": "./assets/g102.png"
+        },
+        {
+          "Name": "Fiio",
+          "Image": "./assets/fiio.png"
         }
       ]
     }
@@ -119,6 +131,7 @@ function Personal() {
             <Container>
               <Row className='text-center'>
                 <h1>GADGETS</h1>
+                <p>Here are some stuff that keeps me productive :</p>
               </Row>
               <Row className="d-flex justify-content-center text-center">
                 {dataGadget.Gadget.map ((gadget, i) => {
