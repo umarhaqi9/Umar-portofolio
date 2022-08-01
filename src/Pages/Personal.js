@@ -25,7 +25,7 @@ function Personal() {
     //   Vanila TiltJS
     VanillaTilt.init(document.querySelectorAll(".hobby-card"), {
         max: 25,
-        speed: 400, 
+        speed: 500, 
         glare: true
 	});
 
