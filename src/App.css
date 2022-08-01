@@ -266,13 +266,13 @@ h1{
 /* Personal page CSS */
 .hobby-card{
   height: 350px;
-  min-width: 300px;
+  min-width: 280px;
   max-width: 350px;
   background: rgb(2,0,36);
   background: linear-gradient(180deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
   margin-top: 30px;
   display: flex;
-  position: relative;
+  /* position: relative; */
   border-radius: 12px;
   transform-style: preserve-3d;
   transform: perspective(1000px);
@@ -327,6 +327,27 @@ h1{
   opacity: 0.8;
 }
 
+#Daiva.hobby-card::before{
+  content: 'REXUS';
+}
+#Daiva.hobby-card::after{
+  content: 'DAIVA';
+  position: absolute;
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  top: 250px;
+  left: 50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+#Daiva.hobby-card:hover::after{
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0.8;
+}
+
 .hobby-card img{
   max-width: 210px;
   max-height: 210px;
@@ -335,7 +356,7 @@ h1{
 }
 
 .hobby-card:hover img{
-  transform: scale(1.2) rotate(-5deg) translate3d(0,0,50px)
+  transform: scale(1.5) rotate(-5deg) translate3d(0,0,50px)
 }
 
 

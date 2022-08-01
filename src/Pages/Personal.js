@@ -52,6 +52,15 @@ function Personal() {
         ]
     }
 
+    const dataGadget = {
+      "Gadget" : [
+        {
+          "Name": "Daiva",
+          "Image": "./assets/daiva.png"
+        }
+      ]
+    }
+
     return (
     <div>
         <Navbar className='fixed-top p-2' bg="black" variant='dark' expand="lg">
@@ -104,6 +113,34 @@ function Personal() {
           </div>
         </div>
 
+        <div className='bg-black text-white text-center pb-5'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,218.7C384,203,480,117,576,112C672,107,768,181,864,224C960,267,1056,277,1152,245.3C1248,213,1344,139,1392,101.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+          <div data-aos="fade-up">
+            <Container>
+              <Row className='text-center'>
+                <h1>GADGETS</h1>
+              </Row>
+              <Row className="d-flex justify-content-center text-center">
+                {dataGadget.Gadget.map ((gadget, i) => {
+                    return(
+                        <Col className="m-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
+                            <div id={gadget.Name} className="hobby-card ">
+                                <img src={gadget.Image}/>
+                            </div>
+                        </Col>
+                    )
+                })}
+                
+                
+              </Row>
+            </Container>
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div id='footer' class="text-center p-4 bg-black text-white">
+          Copyright &copy; Umar Haqi 2022
+        </div>
     </div>
   )
 }
