@@ -25,7 +25,7 @@ function Personal() {
     VanillaTilt.init(document.querySelectorAll(".hobby-card"), {
         max: 25,
         speed: 400, 
-        glare: true,
+        // glare: true,
         "max-glare": .5,
         scale: 1.1
 	});
