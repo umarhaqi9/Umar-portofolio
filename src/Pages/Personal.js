@@ -129,6 +129,18 @@ function Personal() {
         img_src: "./assets/album/nsa.jpg",
         src: "./assets/music/ThisIPromiseYou.mp3"
       },
+      {
+        title: "Clock Strikes",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/jxb.jpg",
+        src: "./assets/music/ClockStrikes.flac"
+      },
+      {
+        title: "September",
+        artist: "Earth, Wind & Fire",
+        img_src: "./assets/album/september.jpg",
+        src: "./assets/music/September.mp3"
+      },
     ]
 
     const [songs] = useState([
@@ -191,6 +203,18 @@ function Personal() {
         artist: "NSYNC",
         img_src: "./assets/album/nsa.jpg",
         src: "./assets/music/ThisIPromiseYou.mp3"
+      },
+      {
+        title: "Clock Strikes",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/jxb.jpg",
+        src: "./assets/music/ClockStrikes.flac"
+      },
+      {
+        title: "September",
+        artist: "Earth, Wind & Fire",
+        img_src: "./assets/album/september.jpg",
+        src: "./assets/music/September.mp3"
       },
     ]);
   
@@ -305,11 +329,11 @@ function Personal() {
                 {dataSong.map((song, i) => {
                   return(
                     <Col key={i} className="col-md-5 m-2">
-                      <div  class="card flex-row bg-black text-white">
-                        <img class="card-img-sm-left album-art" src={song.img_src}/>
-                        <div class="card-body">
-                          <h4 class="card-title h5 h4-sm">{song.title}</h4>
-                          <p class="card-text">{song.artist}</p>
+                      <div  className="card flex-row bg-black text-white">
+                        <img className="card-img-sm-left album-art" src={song.img_src}/>
+                        <div className="card-body">
+                          <h4 className="card-title h5 h4-sm">{song.title}</h4>
+                          <p className="card-text">{song.artist}</p>
                         </div>
                       </div>
                     </Col>
