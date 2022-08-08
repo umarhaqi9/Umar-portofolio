@@ -534,6 +534,31 @@ h1{
   font-size: 18px;
 }
 
+/* Music Card */
+/* .music-card{
+  width: 250px;
+  height: 100px;
+  background-color: #0275d8;
+  border-radius: 12px;
+}
+
+.music-card img{
+  width: 60px;
+  height: 60px;
+  margin-left: 10%;
+  margin-top: 18px;
+  border-radius: 10px;
+} */
+
+.album-art{
+  width: 120px;
+  height: 120px;
+}
+.card{
+  border-radius: 15px;
+}
+
+
 
 /* Animate on Scroll */
 .reveal{

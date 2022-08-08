@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button , Nav, Container, Navbar, Row, Col, Carousel} from 'react-bootstrap';
+import { Button , Nav, Container, Navbar, Row, Col, Carousel, Card} from 'react-bootstrap';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import Player from '../components/Player/Player';
@@ -68,6 +68,69 @@ function Personal() {
       ]
     }
 
+    const dataSong = [
+      {
+        title: "Wasted Nights",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/EOTS.jpg",
+        src: "./assets/music/WastedNights.m4a"
+      },
+      {
+        title: "Save Yourself",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/sy.jpg",
+        src: "./assets/music/SaveYourself.mp3"
+      },
+      {
+        title: "We Are",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/ambitions.jpg",
+        src: "./assets/music/WeAre.mp3"
+      },
+      {
+        title: "FANCY",
+        artist: "TWICE",
+        img_src: "./assets/album/fancy.jpg",
+        src: "./assets/music/Fancy.mp3"
+      },
+      {
+        title: "Peace Be Upon You",
+        artist: "Maher Zain",
+        img_src: "./assets/album/one.jpg",
+        src: "./assets/music/PeaceBeUponYou.mp3"
+      },
+      {
+        title: "夜に駆ける",
+        artist: "YOASOBI",
+        img_src: "./assets/album/thebook.jpg",
+        src: "./assets/music/yorunikakeru.mp3"
+      },
+      {
+        title: "One Way Ticket",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/ambitions.jpg",
+        src: "./assets/music/OneWayTicket.mp3"
+      },
+      {
+        title: "Boyfriend",
+        artist: "Big Time Rush",
+        img_src: "./assets/album/btr.jpg",
+        src: "./assets/music/Boyfriend.mp3"
+      },
+      {
+        title: "Photograph",
+        artist: "Ed Sheeran",
+        img_src: "./assets/album/multiply.jpg",
+        src: "./assets/music/Photograph.mp3"
+      },
+      {
+        title: "This I Promise You",
+        artist: "NSYNC",
+        img_src: "./assets/album/nsa.jpg",
+        src: "./assets/music/ThisIPromiseYou.mp3"
+      },
+    ]
+
     const [songs] = useState([
       {
         title: "Wasted Nights",
@@ -98,6 +161,36 @@ function Personal() {
         artist: "Maher Zain",
         img_src: "./assets/album/one.jpg",
         src: "./assets/music/PeaceBeUponYou.mp3"
+      },
+      {
+        title: "夜に駆ける",
+        artist: "YOASOBI",
+        img_src: "./assets/album/thebook.jpg",
+        src: "./assets/music/yorunikakeru.mp3"
+      },
+      {
+        title: "One Way Ticket",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/ambitions.jpg",
+        src: "./assets/music/OneWayTicket.mp3"
+      },
+      {
+        title: "Boyfriend",
+        artist: "Big Time Rush",
+        img_src: "./assets/album/btr.jpg",
+        src: "./assets/music/Boyfriend.mp3"
+      },
+      {
+        title: "Photograph",
+        artist: "Ed Sheeran",
+        img_src: "./assets/album/multiply.jpg",
+        src: "./assets/music/Photograph.mp3"
+      },
+      {
+        title: "This I Promise You",
+        artist: "NSYNC",
+        img_src: "./assets/album/nsa.jpg",
+        src: "./assets/music/ThisIPromiseYou.mp3"
       },
     ]);
   
@@ -170,11 +263,11 @@ function Personal() {
           {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,218.7C384,203,480,117,576,112C672,107,768,181,864,224C960,267,1056,277,1152,245.3C1248,213,1344,139,1392,101.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> */}
           <div data-aos="fade-up">
             <Container>
-              <Row className='text-center'>
+              <Row className='text-center mt-5'>
                 <h1>GADGETS</h1>
                 <p>Here are some stuff that keeps me productive :</p>
               </Row>
-              <Row className="d-flex justify-content-center text-center">
+              <Row className="d-flex justify-content-center text-center mb-5">
                 {dataGadget.Gadget.map ((gadget, i) => {
                     return(
                         <Col className="m-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
@@ -199,7 +292,7 @@ function Personal() {
                 <p>Here are some of my favorite type of music :</p>
               </Row>
               <Row className="d-flex justify-content-center mt-4">
-                <Col className="col-md-6">
+                <Col className="col-md-8">
                   <Player 
                     currentSongIndex={currentSongIndex} 
                     setCurrentSongIndex={setCurrentSongIndex} 
@@ -207,6 +300,22 @@ function Personal() {
                     songs={songs}
                   />
                 </Col>
+              </Row>
+              <Row className="d-flex justify-content-center mt-4">
+                {dataSong.map((song, i) => {
+                  return(
+                    <Col key={i} className="col-md-5 m-2">
+                      <div  class="card flex-row bg-black text-white">
+                        <img class="card-img-sm-left album-art" src={song.img_src}/>
+                        <div class="card-body">
+                          <h4 class="card-title h5 h4-sm">{song.title}</h4>
+                          <p class="card-text">{song.artist}</p>
+                        </div>
+                      </div>
+                    </Col>
+                  )
+                })}
+                
               </Row>
             </Container>
           </div>
