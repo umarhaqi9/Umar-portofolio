@@ -41,9 +41,7 @@ export default function Home() {
   // EmailJS Script
   const form = useRef();
   const [showAlert, setShowAlert] = useState(false);
-  // const btnLoading = document.querySelector('.btn-loading');
-  // const btnKirim = document.querySelector('.submit-btn');
-  // const alertSukses = document.querySelector('.my-alert');
+  
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -68,6 +66,15 @@ export default function Home() {
   gsap.registerPlugin(TextPlugin);
 
   // gsap.to(".about", {duration: 8, delay: 1.5, text: "I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React. I have been constantly trying my best to develop my front-end engineering skills for the past 2 years. I'm a very open guy to making new friends. I am a very try hard person to achive the best outcome with the best of my abilites. It's not always perfect, but I will always make sure to give the best I can to finish a project."});
+
+  // Loader
+  const fadeOut = () => {
+    const loaderWrapper = 
+    document.querySelector('.wrapper');
+    loaderWrapper.classList.add('fade');
+  }
+
+  window.addEventListener('load', fadeOut);
 
   // Data
   const skillsData = {
@@ -174,7 +181,12 @@ export default function Home() {
     ]
   };
   return (
+    <>
+    
     <div className='App'>
+      <div className="wrapper">
+        <div className="loader"></div>
+      </div>
       <Navbar className='fixed-top p-2' bg="black" variant='dark' expand="lg">
         <Container>
           <Navbar.Brand href="#welcome">Umar Haqi</Navbar.Brand>
@@ -384,5 +396,6 @@ export default function Home() {
           Copyright &copy; Umar Haqi 2022
         </div>
     </div>
+    </>
   )
 }
