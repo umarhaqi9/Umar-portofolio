@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button , Nav, Container, Navbar, Row, Col, Carousel} from 'react-bootstrap';
+import { Button , Nav, Container, Navbar, Row, Col, NavDropdown} from 'react-bootstrap';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 import emailjs from '@emailjs/browser';
@@ -68,13 +68,13 @@ export default function Home() {
   // gsap.to(".about", {duration: 8, delay: 1.5, text: "I'm a front-end developer. My very big interests are in HTML, CSS, reactJS, and Ionic React. I have been constantly trying my best to develop my front-end engineering skills for the past 2 years. I'm a very open guy to making new friends. I am a very try hard person to achive the best outcome with the best of my abilites. It's not always perfect, but I will always make sure to give the best I can to finish a project."});
 
   // Loader
-  const fadeOut = () => {
-    const loaderWrapper = 
-    document.querySelector('.wrapper');
-    loaderWrapper.classList.add('fade');
-  }
+  // const fadeOut = () => {
+  //   const loaderWrapper = 
+  //   document.querySelector('.wrapper');
+  //   loaderWrapper.classList.add('fade');
+  // }
 
-  window.addEventListener('load', fadeOut);
+  // window.addEventListener('load', fadeOut);
 
   // Data
   const skillsData = {
@@ -184,9 +184,9 @@ export default function Home() {
     <>
     
     <div className='App'>
-      <div className="wrapper">
+      {/* <div className="wrapper">
         <div className="loader"></div>
-      </div>
+      </div> */}
       <Navbar className='fixed-top p-2' bg="black" variant='dark' expand="lg">
         <Container>
           <Navbar.Brand href="#welcome">Umar Haqi</Navbar.Brand>
@@ -196,7 +196,18 @@ export default function Home() {
               <Nav.Link href="#moreaboutme">About Me</Nav.Link>
               <Nav.Link href="#projects">My Projects</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
-              <Nav.Link href="/personal">Personal Stuff</Nav.Link>
+              {/* <Nav.Link href="/personal">More</Nav.Link> */}
+              <NavDropdown title="More" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/personal#hobbies">
+                Hobbies
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/personal#gadgets">
+                Gadgets
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/personal#music">
+                Music
+              </NavDropdown.Item>
+            </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Container>

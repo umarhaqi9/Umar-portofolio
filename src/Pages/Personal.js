@@ -235,27 +235,27 @@ function Personal() {
     <div>
         <Navbar className='fixed-top p-2' bg="black" variant='dark' expand="lg">
             <Container>
-            <Navbar.Brand href="/#welcome">Umar Haqi</Navbar.Brand>
+            <Navbar.Brand href="/">Umar Haqi</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse  id="basic-navbar-nav">
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="/#moreaboutme">About Me</Nav.Link>
-                <Nav.Link href="/#projects">My Projects</Nav.Link>
-                <Nav.Link href="/#contact">Contact</Nav.Link>
-                <Nav.Link href="/personal">Personal Stuff</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="#hobbies">Hobbies</Nav.Link>
+                <Nav.Link href="#gadgets">Gadgets</Nav.Link>
+                <Nav.Link href="#music">Music</Nav.Link>
+                
                 </Nav>
             </Navbar.Collapse>
             </Container>
         </Navbar>
 
         {/* Welcome Section */}
-        <div  id='welcome' className='bg-black text-white text-center pt-5'>
+        <div id='welcome' className='bg-black text-white text-center pt-5'>
           
           <img data-aos="zoom-in-up" className='profpic' src='https://cdn.discordapp.com/attachments/841587576464736266/896039768499032064/20211008_212135.jpg'/>
-          <h1 data-aos="fade-up" data-aos-delay="500">Hi, I'm Umar!</h1>
+          <h1 data-aos="fade-up" data-aos-delay="500">More About Umar!</h1>
           <p data-aos="fade-up" data-aos-delay="800" className="m-2">
-            Welcome to my personal website. This site will provide informations
-            about myself. 
+            This page will tell you more information about me. 
           </p>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fillOpacity="1" d="M0,128L34.3,154.7C68.6,181,137,235,206,213.3C274.3,192,343,96,411,85.3C480,75,549,149,617,170.7C685.7,192,754,160,823,160C891.4,160,960,192,1029,170.7C1097.1,149,1166,75,1234,53.3C1302.9,32,1371,64,1406,80L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
         </div>
@@ -283,7 +283,7 @@ function Personal() {
           </div>
         </div>
 
-        <div className='jumbotron bg-black text-white text-center pt-5 pb-5'>
+        <div id="gadgets" className='jumbotron bg-black text-white text-center pt-5 pb-5'>
           {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,218.7C384,203,480,117,576,112C672,107,768,181,864,224C960,267,1056,277,1152,245.3C1248,213,1344,139,1392,101.3L1440,64L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg> */}
           <div data-aos="fade-up">
             <Container>
