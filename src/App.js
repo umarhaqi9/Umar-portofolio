@@ -6,15 +6,31 @@ import "aos/dist/aos.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Personal from './Pages/Personal';
+import Loading from './components/Loading';
 
 
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000)
+  })
+
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/personal' element={<Personal/>} />
+        <Route path='/' element={
+          isLoading==true?
+            <Loading/> :
+            <Home/>
+        } />
+        <Route path='/personal' element={
+          isLoading==true?
+          <Loading/> :
+          <Personal/>
+        } />
       </Routes>
     </Router>
   );

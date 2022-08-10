@@ -22,7 +22,8 @@ function Personal() {
         max: 25,
         speed: 500, 
         glare: true,
-        "max-glare": .5
+        "max-glare": .5,
+        scale: 1.2
 	  });
 
     // DATA
