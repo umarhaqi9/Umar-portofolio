@@ -344,21 +344,21 @@ export default function Home() {
                     <Container data-aos="fade-up" >
                       <Row>
                         <Col>
-                          <Button variant='black' className='bg-black text-white rounded-pill mt-3' href='https://github.com/umarhaqi9' target='_blank'>
+                          <Button variant='black' className='bg-black text-white rounded-circle mt-3' href='https://github.com/umarhaqi9' target='_blank'>
                             <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172546437160/github.png'/>
-                            Github
+                            {/* Github */}
                           </Button>
                         </Col>
                         <Col>
-                          <Button variant='primary' className='text-white rounded-pill mt-3' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
+                          <Button variant='primary' className='text-white rounded-circle mt-3' href='https://www.linkedin.com/in/umar-haqi-6b8720170/' target='_blank'>
                             <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/990854583083495424/linkedin.png'/>
-                            LinkedIn
+                            {/* LinkedIn */}
                           </Button>
                         </Col>
                         <Col>
-                          <Button variant='secondary' className='text-white rounded-pill mt-3' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
+                          <Button variant='secondary' className='text-white rounded-circle mt-3' href='https://www.instagram.com/umar.haqi912/' target='_blank'>
                             <img className='icon-button' src='https://cdn.discordapp.com/attachments/989301099422949466/989301172236083320/instagram.png'/>
-                            Instagram
+                            {/* Instagram */}
                           </Button>
                         </Col>
                       </Row>
