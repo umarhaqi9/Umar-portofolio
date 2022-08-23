@@ -142,6 +142,24 @@ function Personal() {
         img_src: "./assets/album/september.jpg",
         src: "./assets/music/September.mp3"
       },
+      {
+        title: "Stand Out Fit In",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/EOTS.jpg",
+        src: "./assets/music/StandOutFitIn.m4a"
+      },
+      {
+        title: "Renegades",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/sy.jpg",
+        src: "./assets/music/Renegades.flac"
+      },
+      {
+        title: "Wonder",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/sy.jpg",
+        src: "./assets/music/Wonder.flac"
+      },
     ]
 
     const [songs] = useState([
@@ -216,6 +234,24 @@ function Personal() {
         artist: "Earth, Wind & Fire",
         img_src: "./assets/album/september.jpg",
         src: "./assets/music/September.mp3"
+      },
+      {
+        title: "Stand Out Fit In",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/EOTS.jpg",
+        src: "./assets/music/StandOutFitIn.m4a"
+      },
+      {
+        title: "Renegades",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/sy.jpg",
+        src: "./assets/music/Renegades.flac"
+      },
+      {
+        title: "Wonder",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/sy.jpg",
+        src: "./assets/music/Wonder.flac"
       },
     ]);
   
