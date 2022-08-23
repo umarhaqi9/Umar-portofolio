@@ -160,6 +160,12 @@ function Personal() {
         img_src: "./assets/album/sy.jpg",
         src: "./assets/music/Wonder.flac"
       },
+      {
+        title: "One Way Ticket + Clock Strikes",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/cover_fow.jpg",
+        src: "./assets/music/OneWayTicket+ClockStrikes.flac"
+      },
     ]
 
     const [songs] = useState([
@@ -253,6 +259,12 @@ function Personal() {
         img_src: "./assets/album/sy.jpg",
         src: "./assets/music/Wonder.flac"
       },
+      {
+        title: "One Way Ticket + Clock Strikes",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/cover_fow.jpg",
+        src: "./assets/music/OneWayTicket+ClockStrikes.flac"
+      },
     ]);
   
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -306,15 +318,13 @@ function Personal() {
               <Row className="d-flex justify-content-center text-center">
                 {dataHobby.Hobby.map ((hobby, i) => {
                     return(
-                        <Col className="m-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
+                        <Col className="col-md-4 m-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
                             <div id={hobby.Name} className="hobby-card ">
                                 <img src={hobby.Image}/>
                             </div>
                         </Col>
                     )
                 })}
-                
-                
               </Row>
             </Container>
           </div>
@@ -331,7 +341,7 @@ function Personal() {
               <Row className="d-flex justify-content-center text-center mb-5">
                 {dataGadget.Gadget.map ((gadget, i) => {
                     return(
-                        <Col className="m-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
+                        <Col className="col-md-4 m-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
                             <div id={gadget.Name} className="hobby-card ">
                                 <img src={gadget.Image}/>
                             </div>
@@ -353,7 +363,7 @@ function Personal() {
                 <p>Here are some of my favorite type of music :</p>
               </Row>
               <Row className="d-flex justify-content-center mt-4">
-                <Col className="col-md-8">
+                <Col className="col-sm-6 col-md-8 col-lg-6">
                   <Player 
                     currentSongIndex={currentSongIndex} 
                     setCurrentSongIndex={setCurrentSongIndex} 
@@ -366,7 +376,7 @@ function Personal() {
                 {dataSong.map((song, i) => {
                   return(
                     <Col key={i} className="col-md-5 m-2">
-                      <div  className="card flex-row bg-black text-white">
+                      <div  className="card flex-row text-white">
                         <img className="card-img-sm-left album-art" src={song.img_src}/>
                         <div className="card-body">
                           <h4 className="card-title h5 h4-sm">{song.title}</h4>
