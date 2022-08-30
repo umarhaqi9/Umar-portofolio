@@ -9,7 +9,8 @@ h1{
   font-weight: 800;
 }
 
-/* personal CSS */
+
+/* Home Page CSS */
 
 .profpic{
   padding: 20px;
@@ -262,12 +263,14 @@ h1{
   max-height: 40rem;
 }
 
-
+/* ----------------- */
 /* Personal page CSS */
+
 .hobby-card{
   height: 350px;
-  min-width: 250px;
-  max-width: 350px;
+  /* min-width: 250px;
+  max-width: 400px; */
+  width: 300px;
   background: rgb(2,0,36);
   background: linear-gradient(180deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
   margin-top: 30px;
@@ -402,7 +405,7 @@ h1{
   content: 'M3 PRO';
   position: absolute;
   color: #fff;
-  font-size: 2em;
+  font-size: 1.9em;
   font-weight: bold;
   font-style: italic;
   top: 280px;

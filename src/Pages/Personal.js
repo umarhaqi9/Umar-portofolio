@@ -166,6 +166,12 @@ function Personal() {
         img_src: "./assets/album/cover_fow.jpg",
         src: "./assets/music/OneWayTicket+ClockStrikes.flac"
       },
+      {
+        title: "Let Me Let You Go",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/sy.jpg",
+        src: "./assets/music/LetMeLetYouGo.mp3"
+      },
     ]
 
     const [songs] = useState([
@@ -265,6 +271,12 @@ function Personal() {
         img_src: "./assets/album/cover_fow.jpg",
         src: "./assets/music/OneWayTicket+ClockStrikes.flac"
       },
+      {
+        title: "Let Me Let You Go",
+        artist: "ONE OK ROCK",
+        img_src: "./assets/album/sy.jpg",
+        src: "./assets/music/LetMeLetYouGo.mp3"
+      },
     ]);
   
     const [currentSongIndex, setCurrentSongIndex] = useState(0);
@@ -282,7 +294,7 @@ function Personal() {
 
     return (
     <div>
-        <Navbar className='fixed-top p-2' bg="black" variant='dark' expand="lg">
+        <Navbar className='fixed-top pt-2 pb-2' bg="black" variant='dark' expand="lg">
             <Container>
             <Navbar.Brand href="/">Umar Haqi</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -318,7 +330,7 @@ function Personal() {
               <Row className="d-flex justify-content-center text-center">
                 {dataHobby.Hobby.map ((hobby, i) => {
                     return(
-                        <Col className="col-md-4 m-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
+                        <Col className="d-flex justify-content-center col-md-4 col-xl-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
                             <div id={hobby.Name} className="hobby-card ">
                                 <img src={hobby.Image}/>
                             </div>
@@ -341,7 +353,7 @@ function Personal() {
               <Row className="d-flex justify-content-center text-center mb-5">
                 {dataGadget.Gadget.map ((gadget, i) => {
                     return(
-                        <Col className="col-md-4 m-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
+                        <Col className="d-flex justify-content-center col-md-4 col-xl-3" key={i} data-tilt data-tilt-max="50" data-tilt-speed="500">
                             <div id={gadget.Name} className="hobby-card ">
                                 <img src={gadget.Image}/>
                             </div>
