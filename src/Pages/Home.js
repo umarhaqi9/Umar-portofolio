@@ -385,15 +385,15 @@ export default function Home() {
                   <form ref={form} onSubmit={sendEmail}>
                     <div data-aos="fade-up" data-aos-delay="450" className="form-group mt-3">
                       <label for="name">Name</label>
-                      <input type="text" name="user_name" className="form-control" id="name"  placeholder="Enter Name"/>
+                      <input type="text" name="user_name" className="form-control" id="name"  placeholder="Enter Name" required/>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="450" className="form-group mt-3">
                       <label for="email">Email address</label>
-                      <input type="email" name="user_email" className="form-control" id="email" placeholder="Enter Email"/>
+                      <input type="email" name="user_email" className="form-control" id="email" placeholder="Enter Email" required/>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="450" className="form-group mt-3">
                       <label for="message">Message</label>
-                      <textarea name="message" className="form-control" rows="4" id="message" placeholder="Enter Message..."/>
+                      <textarea name="message" className="form-control" rows="4" id="message" placeholder="Enter Message..." required/>
                     </div>
                     <button type="submit" className="btn btn-primary mt-3 submit-btn" data-aos="fade-up" data-aos-delay="450" value="Send">Send</button>
                     <button className="btn btn-primary btn-loading mt-3 d-none" type="button" disabled>
