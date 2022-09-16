@@ -178,15 +178,20 @@ export default function Home() {
         "Link": "https://umn.itch.io/witchahead",
         "Image": "https://cdn.discordapp.com/attachments/989301099422949466/1001765226980593664/unknown.png"
       },
+      {
+        "id": "UmarNext",
+        "Name": "Umar's Website",
+        "Desc": "New Portofolio Website (NextJS + TailwindCSS)",
+        "Link": "https://umarhaqi9.vercel.app/",
+        "Image": "https://cdn.discordapp.com/attachments/989301099422949466/1020250188482355240/unknown.png"
+      },
     ]
   };
   return (
     <>
     
     <div className='App'>
-      {/* <div className="wrapper">
-        <div className="loader"></div>
-      </div> */}
+      
       <Navbar className='fixed-top p-2' bg="black" variant='dark' expand="lg">
         <Container>
           <Navbar.Brand href="#welcome">Umar Haqi</Navbar.Brand>
@@ -304,7 +309,7 @@ export default function Home() {
                         <button id={project.id} className='proj-button'>
                           <div className='proj-name'>
                             <h2>{project.Name}</h2>
-                            <p>{project.Desc}</p>
+                            <p className="mx-4">{project.Desc}</p>
                           </div>
                           
                         </button>

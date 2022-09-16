@@ -114,6 +114,23 @@ h1{
   background-image: none;
 }
 
+#UmarNext.proj-button{
+  background-size: cover;
+  background-position: 100%;
+  background-image: url('https://cdn.discordapp.com/attachments/989301099422949466/1020250188482355240/unknown.png');
+}
+#UmarNext.proj-button:hover{
+  background-color: #FFF;
+  
+  background-image: none;
+}
+#UmarNext.proj-button:hover h2{
+  color: #1fcceb;
+}
+#UmarNext.proj-button:hover p{
+  color: #000000;
+}
+
 .scroll-btn{
   padding: 15px;
   overflow: hidden;
