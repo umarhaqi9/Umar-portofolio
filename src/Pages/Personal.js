@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 import Player from '../components/Player/Player';
 import VanillaTilt from 'vanilla-tilt';
 import "vanilla-tilt/dist/vanilla-tilt.min.js";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 
 function Personal() {
@@ -293,6 +295,28 @@ function Personal() {
     }, [currentSongIndex]);
 
     return (
+      <motion.div
+        initial="initialState"
+        animate="animateState"
+        exit="exitState"
+        transition={{
+          duration: 0.75,
+        }}
+        variants={{
+          initialState: {
+            opacity: 0,
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+          },
+          animateState: {
+            opacity: 1,
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+          },
+          exitState: {
+            clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+          },
+        }}
+      >
+
     <div>
         <Navbar className='fixed-top pt-2 pb-2' bg="black" variant='dark' expand="lg">
             <Container>
@@ -300,7 +324,7 @@ function Personal() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse  id="basic-navbar-nav">
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link><Link className="text-white text-decoration-none" to="/">Home</Link></Nav.Link>
                 <Nav.Link href="#hobbies">Hobbies</Nav.Link>
                 <Nav.Link href="#gadgets">Gadgets</Nav.Link>
                 <Nav.Link href="#music">Music</Nav.Link>
@@ -409,6 +433,7 @@ function Personal() {
           Copyright &copy; Umar Haqi 2022
         </div>
     </div>
+    </motion.div>
   )
 }
 

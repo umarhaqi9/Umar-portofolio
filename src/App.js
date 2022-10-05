@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Personal from './Pages/Personal';
 import Loading from './components/Loading';
+import { AnimatePresence, motion } from 'framer-motion';
 
 
 
@@ -18,21 +19,25 @@ function App() {
     }, 2000)
   })
 
+  // const location = useLocation();
+
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={
-          isLoading==true?
+    <AnimatePresence exitBeforeEnter>
+      <Router>
+        <Routes>
+          <Route path='/' element={
+            isLoading==true?
+              <Loading/> :
+              <Home/>
+          } />
+          <Route path='/personal' element={
+            isLoading==true?
             <Loading/> :
-            <Home/>
-        } />
-        <Route path='/personal' element={
-          isLoading==true?
-          <Loading/> :
-          <Personal/>
-        } />
-      </Routes>
-    </Router>
+            <Personal/>
+          } />
+        </Routes>
+      </Router>
+    </AnimatePresence>
   );
 }
 
